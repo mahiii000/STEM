@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile View</title>
+    <link rel="stylesheet" href="stem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <header class="main-header">
+    <a href="#" class="logo">
+        <img src="images/ChatGPT_Image_Jun_15__2025__10_33_49_PM-removebg-preview (1).png" alt="Bright Mind Logo">
+       
+    </a>
+        <!-- =========== NEW CODE WITH YOUR IMAGES =========== -->
+<nav class="main-nav">
+    <ul>
+        <li>
+            <a href="#">
+                <!-- Replace the i tag with an img tag -->
+                <img src="images/home-removebg-preview.png" alt="Home">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <!-- Make sure the filename matches your file -->
+                <img src="images/2-removebg-preview.png" alt="Book">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <!-- Example for the teacher icon -->
+                <img src="images/blog.3-removebg-preview.png" alt="Courses">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <!-- Example for the blog/rss icon -->
+                <img src="images/teach.4-removebg-preview.png" alt="Blog">
+            </a>
+        </li>
+    </ul>
+</nav>
+        <button class="edit-button">Edit</button>
+    </header>
+
+    <main class="content-area">
+        <!-- The profile-card now wraps EVERYTHING related to the profile -->
+        <div class="profile-card">
+            
+            <!-- Avatar (no change) -->
+            <div class="Profile-avatar">
+                <img src="images/business-avatar-profile-black-icon-man-of-user-symbol-in-trendy-flat-style-isolated-on-male-profile-people-diverse-face-for-social-network-or-web-vector copy.jpg" alt="Bright Mind">>
+            </div>
+
+            <!-- Name and Grade (no change) -->
+            <h2 class="profile-name">Phillip</h2>
+            <p class="profile-grade">5th Grade</p>
+
+            <!-- 
+            ↓↓↓ THIS IS THE CORRECTED SECTION ↓↓↓
+            All achievements are now INSIDE the card and have a proper structure.
+            -->
+            <div class="achievements-section">
+                <h3>Achievements:</h3>
+                <p>Badges</p>
+                
+                <!-- Container for the badges -->
+                <div class="badge-container">
+                    <img src="images/enroll.stem-removebg-preview.png" alt="Enrollment Badge" class="badge-image">
+                    <img src="images/study.stem-removebg-preview.png" alt="Study Abroad Badge" class="badge-image">
+                    <img src="images/scholarship.stem.jpg" alt="Scholarship Badge" class="badge-image">
+                    <img src="images/comm.stem.jpg" alt="Community Service Badge" class="badge-image">
+                    <img src="images/achev.stem-removebg-preview.png" alt="Student Achievement Badge" class="badge-image">
+                </div>
+
+                <p class="certificates-text">Certificates: <span class="purple-text">500+</span></p>
+            </div>
+            
+        </div> <!-- End of .profile-card -->
+    </main>
+
+</div>
+
+<script src="stem.js"></script>
+
+</body>
+</html>
