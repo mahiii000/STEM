@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Mind - Blogs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blogs.css" />
+</head>
+<body>
+
+  <!-- 🔷 HEADER -->
+  <header class="banner">
+  <!-- Logo on the left -->
+  <div class="logo-area">
+    <img src="images/logo.png" alt="Bright Mind Logo" class="logo" />
+  </div>
+
+  <!-- Icons in the center -->
+  <nav class="nav-icons">
+    <div class="icon-item" data-page="index">
+      <div class="icon-box">
+        <img src="images/home.png" alt="Home" />
+      </div>
+      <span class="label">Home</span>
+    </div>
+    <div class="icon-item" data-page="learning">
+      <div class="icon-box">
+        <img src="images/learning.png" alt="Learning" />
+      </div>
+      <span class="label">Learning</span>
+    </div>
+    <div class="icon-item" data-page="teachers">
+      <div class="icon-box">
+        <img src="images/teachers.png" alt="Teachers" />
+      </div>
+      <span class="label">Teachers</span>
+    </div>
+    <div class="icon-item active" data-page="blogs">
+      <div class="icon-box">
+        <img src="images/blogs.png" alt="Blog" />
+      </div>
+      <span class="label">Blog</span>
+    </div>
+  </nav>
+</header>
+
+  <!-- 🔶 Featured Blog Section -->
+  <section class="featured">
+    <div class="featured-content">
+      <p class="source">By Themadbrains in <span class="tag">Inspiration</span></p>
+      <h1>Why Swift UI Should Be on the Radar of Every Mobile Developer</h1>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. It’s time to reimagine how we design native mobile applications.</p>
+      <button class="btn" id="learnBtn">Start learning now</button>
+    </div>
+    <div class="featured-image">
+      <img src="images/blog-main.png" alt="Swift UI Article">
+    </div>
+  </section>
+
+  <!-- 🟦 Blog Categories -->
+  <section class="categories" id="categories">
+    <h2>Reading Blog List</h2>
+    <div class="category-cards">
+      <div class="category-card" onclick="filterBlogs('uxui')"><img src="images/blog-uxui.png"><p>UX/UI</p></div>
+      <div class="category-card" onclick="filterBlogs('react')"><img src="images/blog-react.jpg"><p>React</p></div>
+      <div class="category-card" onclick="filterBlogs('php')"><img src="images/blog-php.jpg"><p>PHP</p></div>
+      <div class="category-card" onclick="filterBlogs('code')"><img src="images/blog-code.png"><p>Code</p></div>
+    </div>
+  </section>
+
+  <!-- 🟩 Related Blog Section -->
+  <section class="related">
+    <h2>Related Blog</h2>
+    <div class="related-cards">
+      <div class="related-card" data-category = "edtech">
+        <img src="images/speaker.png" alt="EdTech">
+        <h3>Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution</h3>
+        <p class="excerpt">Class, launched less than a year ago by Blackboard co-founder Michael Chasen...</p>
+        <div class="meta">
+          <a href="#">Read more</a>
+        </div>
+        <div class="author">
+          <img src="images/lina.png" class="avatar" alt="Lina">
+          <div><strong>Lina</strong></div>
+        </div>
+      </div>
+
+      <div class="related-card" data-category="frontend development">
+        <img src="images/blog-main.png" alt="Laptop">
+        <h3>New AI tools transforming front-end development</h3>
+        <p class="excerpt">Developers are using AI to generate UI code, accessibility checks, and more...</p>
+        <div class="meta">
+          <a href="#">Read more</a>
+        </div>
+        <div class="author">
+          <img src="images/lina.png" class="avatar" alt="Lina"> <strong>Lina</strong>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟨 Marketing Articles -->
+  <section class="marketing" id="marketing">
+    <h2>Marketing Articles</h2>
+    <div class="marketing-cards">
+      <div class="marketing-card" data-category = "design">
+        <img src="images/A1.png" alt="Girl studying">
+        <div class="tags">
+          <span>🎨 Design</span>
+          <span>🕒 3 Months</span>
+        </div>
+        <h3>AWS Certified Solutions Architect</h3>
+        <p>Boost your resume with this globally respected certification. Our course offers mock tests, labs, and real-world projects.</p>
+        <div class="author">
+          <img src="images/lina.png" class="avatar" alt="Lina"> <strong>Lina</strong>
+        </div>
+      </div>
+
+      <div class="marketing-card" data-category = "design">
+        <img src="images/A2.png" alt="Girl studying">
+        <div class="tags">
+          <span>🎨 Design</span>
+          <span>🕒 3 Months</span>
+        </div>
+        <h3>AWS Certified Solutions Architect</h3>
+        <p>Boost your resume with this globally respected certification. Our course offers mock tests, labs, and real-world projects.</p>
+        <div class="author">
+          <img src="images/lina.png" class="avatar" alt="Lina"> <strong>Lina</strong>
+        </div>
+      </div>
+
+      <div class="marketing-card" data-category = "design">
+        <img src="images/blog-main.png" alt="Girl studying">
+        <div class="tags">
+          <span>🎨 Design</span>
+          <span>🕒 3 Months</span>
+        </div>
+        <h3>AWS Certified Solutions Architect</h3>
+        <p>Boost your resume with this globally respected certification. Our course offers mock tests, labs, and real-world projects.</p>
+        <div class="author">
+          <img src="images/lina.png" class="avatar" alt="Lina"> <strong>Lina</strong>
+        </div>
+      </div>
+
+
+      <!-- Duplicate or add more cards as needed -->
+    </div>
+  </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,678 @@
+/* General Body and Container */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Updated for specific main content padding, to keep banner full width */
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Original .container for footer/sticky bar */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Course Layout Grid */
+.course-layout {
+    display: flex;
+    grid-template-columns: 300px 1fr; /* Sidebar on left, Main content on right */
+    gap: 20px;
+    padding: 0px 20px; /* Padding for the entire grid */
+    flex-grow: 1; /* Allows it to take up available space */
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main Content Area */
+.main-content {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    flex: 1;
+    padding: 20px;
+}
+
+/* Course Banner */
+.course-banner {
+    background: linear-gradient(135deg, #a95edf, #8a2be2); /* Purple gradient */
+    color: #fff;
+    padding: 30px 0; /* Padding handled by its own container */
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.course-banner::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+.course-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.course-banner .breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.course-banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.course-banner .course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.course-banner .course-meta span {
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+}
+
+.course-banner .course-meta i {
+    margin-right: 8px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.course-banner .short-description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.course-banner .container-fluid {
+    max-width: 1200px; /* Or whatever max-width you prefer */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banner-actions .btn {
+    margin-right: 15px; /* Keep some margin if other buttons were expected */
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.banner-actions .btn-primary {
+    background-color: #72a4ef; /* Gold */
+    color: #290e3b;
+    border: none;
+    font-weight: 600;
+}
+
+.banner-actions .btn-primary:hover {
+    background-color: #85c8ff;
+    transform: translateY(-2px);
+}
+
+/* Removed: .banner-actions .btn-secondary styles as these buttons are no longer present. */
+
+/* Video Section */
+.video-section {
+    padding: 30px 20px; /* Adjusted padding to match tab content */
+    border-bottom: 1px solid #eee;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.video-controls-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.progress-bar-wrapper {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #a758df;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.video-controls-info small {
+    display: block;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-icon {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-icon:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    color: #333;
+    border-color: #ccc;
+}
+
+.btn-icon:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Course Content Tabs */
+.course-content-tabs {
+    padding: 30px 20px;
+}
+
+.tabs-nav {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+    overflow-x: auto; /* For small screens */
+}
+
+.tab-btn {
+    background-color: transparent;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.tab-btn:hover {
+    color: #6a0dad;
+}
+
+.tab-btn.active {
+    color: #6a0dad;
+    border-bottom: 2px solid #6a0dad;
+}
+
+.tabs-content .tab-pane {
+    display: none;
+    padding: 20px 0;
+    line-height: 1.7;
+}
+
+.tabs-content .tab-pane.active {
+    display: block;
+}
+
+.tab-pane h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.tab-pane h3 i {
+    margin-right: 10px;
+    color: #6a0dad;
+}
+
+.tab-pane ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.tab-pane ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #555;
+}
+
+.tab-pane .what-you-learn ul li i,
+.tab-pane .requirements ul li i {
+    color: #28a745; /* Green for check/bullet */
+    margin-right: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px; /* Padding for the sidebar content */
+    height: fit-content; /* Adjusts to content height */
+    position: sticky; /* Makes sidebar stick */
+    top: 30px; /* Distance from top when sticky */
+    flex: 0 0 280px;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 25px; /* Spacing between sections */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+.sidebar h3:first-child {
+    margin-top: 0; /* No top margin for the first h3 */
+}
+
+
+.sidebar .lesson-buttons button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 12px 15px;
+    text-align: left;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #555;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    display: flex; /* Allow icon to be inline */
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar .lesson-buttons button small {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.sidebar .lesson-buttons button:hover:not(:disabled) {
+    background-color: #e5e5e5;
+    border-color: #ccc;
+}
+
+.sidebar .lesson-buttons button.selected {
+    background-color: #e6e6fa; /* Light purple */
+    border-color: #6a0dad;
+    color: #6a0dad;
+    font-weight: 600;
+}
+
+.sidebar .lesson-buttons button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f9f9f9;
+    color: #999;
+}
+.sidebar .lesson-buttons button .fa-lock {
+    color: #ccc;
+}
+
+/* Course Progress */
+.course-progress {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.progress-circle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#6a0dad 0%, #e0e0e0 0%); /* Initial 0% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #6a0dad;
+    box-shadow: inset 0 0 0 5px #fff;
+    flex-shrink: 0;
+}
+
+.progress-details p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.btn-view-certificate {
+    background-color: #28a745; /* Green */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-view-certificate:hover {
+    background-color: #218838;
+}
+
+/* Removed: .course-details-card and .course-share sections */
+/* As these elements are no longer in the HTML */
+
+/* Sticky Bottom Bar for Mobile */
+.sticky-bottom-bar {
+    display: none; /* Hidden by default, shown on smaller screens */
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+.sticky-bottom-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btn-bottom-cta {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-bottom-cta:hover {
+    background-color: #8a2be2;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .course-layout {
+        grid-template-columns: 1fr; /* Stack main content and sidebar */
+        padding: 20px;
+    }
+
+    .sidebar {
+        position: static; /* Remove sticky behavior on smaller screens */
+        order: 2; /* Put sidebar below main content */
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    /* Adjust main content padding when it's not next to sidebar */
+    .main-content {
+        padding: 0; /* Remove internal padding as content takes care of it */
+        box-shadow: none; /* Remove shadow to blend better */
+        border-radius: 0; /* Remove border radius */
+    }
+
+    .course-banner {
+        border-radius: 8px; /* Re-apply border radius for standalone banner */
+        margin-bottom: 20px;
+    }
+
+    .course-banner h1 {
+        font-size: 2.5em;
+    }
+
+    .course-banner .course-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner-actions .btn {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .sticky-bottom-bar {
+        display: block; /* Show sticky bar */
+    }
+
+    /* Removed: .sidebar .course-details-card, .sidebar .course-share from @media queries
+       as these are entirely removed from HTML now. */
+    .sidebar .course-progress {
+         padding-top: 15px;
+         border-top: 1px solid #eee;
+         margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-layout {
+        padding: 15px;
+    }
+    .course-banner h1 {
+        font-size: 2em;
+    }
+
+    .course-banner .short-description {
+        font-size: 16px;
+    }
+
+    .tab-btn {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+
+    .instructor-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .instructor-details h4 {
+        font-size: 20px;
+    }
+
+    .instructor-social {
+        justify-content: center;
+    }
+
+    .overall-rating {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .overall-rating .rating-value {
+        font-size: 3em;
+    }
+    .overall-rating .stars {
+        font-size: 1.5em;
+    }
+    .sidebar .lesson-buttons button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .sidebar h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-layout {
+        padding: 10px;
+    }
+    .course-banner h1 {
+        font-size: 1.8em;
+    }
+
+    .course-banner .course-meta span {
+        font-size: 14px;
+    }
+
+    .tab-btn {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .lesson-item {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    .lesson-item .lesson-duration {
+        flex-basis: 100%; /* Push duration to new line */
+        order: 3;
+        text-align: right;
+        margin-right: 0;
+        font-size: 12px;
+    }
+    .lesson-item .play-lesson-btn {
+        order: 2;
+        font-size: 14px;
+    }
+    .lesson-item .lesson-status {
+        order: 1;
+    }
+    .lesson-item .lesson-title {
+        order: 1; /* Keep title with status */
+        flex-grow: 0;
+        margin-left: -10px;
+    }
+
+    .progress-circle-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.page-header {
+  padding: 16px;
+  padding-bottom: 5;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #8a2be2;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #a66dda;
+  transform: scale(1.05);
+}
+
+.course-banner {
+  position: relative; /* Required for .back-btn absolute positioning */
+}
+

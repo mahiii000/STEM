@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Introduction To Algebra</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="course.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="page-header">
+    <a href="learning.html" class="back-btn" aria-label="Go back">
+    <i class="fas fa-arrow-left"></i>
+    </a>
+  </div>
+
+
+    <div class="course-banner">
+        <div class="container-fluid">
+
+            <h1>Master the Fundamentals of Algebra</h1>
+            <div class="course-meta">
+                <span class="instructor"><i class="fas fa-chalkboard-teacher"></i> By Lina George</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.8 (1,234 ratings)</span>
+                <span class="students"><i class="fas fa-users"></i> 12,500 students</span>
+                <span class="duration"><i class="fas fa-clock"></i> Total 10 hours</span>
+            </div>
+            <p class="short-description">Unlock the world of mathematics with this comprehensive introduction to algebra. Build a strong foundation, understand core concepts, and solve problems with confidence.</p>
+            <div class="banner-actions">
+                <button class="btn btn-primary"><i class="fas fa-play-circle"></i> Start Course</button>
+            </div>
+        </div>
+    </div>
+    <div class="course-layout">
+        <aside class="sidebar">
+            <h3>Lessons</h3>
+            <div class="lesson-buttons">
+                <button class="lesson-btn" data-lesson-id="1">Lesson 01<br><small>What is Algebra? - 20 mins</small></button>
+                <button class="lesson-btn" data-lesson-id="2">Lesson 02<br><small>Variables & Expressions - 25 mins</small></button>
+                <button class="lesson-btn" data-lesson-id="3">Lesson 03<br><small>Solving Linear Equations - 30 mins</small></button>
+                <button class="lesson-btn" data-lesson-id="4" disabled><i class="fas fa-lock"></i> Lesson 04<br><small>Inequalities - 25 mins</small></button>
+                <button class="lesson-btn" data-lesson-id="5" disabled><i class="fas fa-lock"></i> Lesson 05<br><small>Graphing Lines - 35 mins</small></button>
+                <button class="lesson-btn" data-lesson-id="6" disabled><i class="fas fa-lock"></i> Lesson 06<br><small>Polynomials - 40 mins</small></button>
+                <button class="lesson-btn" data-lesson-id="7" disabled><i class="fas fa-lock"></i> Lesson 07<br><small>Factoring - 30 mins</small></button>
+                <button class="lesson-btn" data-lesson-id="8" disabled><i class="fas fa-lock"></i> Lesson 08<br><small>Quadratic Equations - 45 mins</small></button>
+            </div>
+
+            <h3>Practice Quiz</h3>
+            <div class="lesson-buttons">
+                <button class="quiz-btn" data-quiz-id="1">Quiz 01<br><small>10 mins</small></button>
+                <button class="quiz-btn" data-quiz-id="2" disabled><i class="fas fa-lock"></i> Quiz 02<br><small>15 mins</small></button>
+                <button class="quiz-btn" data-quiz-id="3" disabled><i class="fas fa-lock"></i> Quiz 03<br><small>20 mins</small></button>
+            </div>
+
+            <div class="course-progress">
+                <h3>Course Progress</h3>
+                <div class="progress-circle-wrapper">
+                    <div class="progress-circle">
+                        <span class="progress-percentage">0%</span>
+                    </div>
+                    <div class="progress-details">
+                        <p>0/8 Lessons Completed</p>
+                        <button class="btn btn-view-certificate"><i class="fas fa-certificate"></i> View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="video-section container-fluid">
+                <div class="video-container">
+                    <video id="mainVideo" controls poster="images/video-poster.jpeg">
+                        <source src="videos/lesson1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-controls-info">
+                    <h2>Lesson 01: What is Algebra ?</h2>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <small>0% complete for this lesson</small>
+                    <div class="navigation-buttons">
+                        <button class="btn btn-icon" id="prevLessonBtn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                        <button class="btn btn-icon" id="nextLessonBtn">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="course-content-tabs container-fluid">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                </div>
+
+                <div class="tabs-content">
+                    <div id="overview" class="tab-pane active">
+                        <div class="what-you-learn">
+                            <h3><i class="fas fa-check-circle"></i> What you'll learn</h3>
+                            <ul>
+                                <li>Understand the fundamental concepts of algebraic expressions.</li>
+                                <li>Master solving various types of linear equations and inequalities.</li>
+                                <li>Perform operations on polynomials including addition, subtraction, and multiplication.</li>
+                                <li>Factor algebraic expressions using different techniques.</li>
+                                <li>Graph linear equations and interpret their slopes and intercepts.</li>
+                                <li>Solve real-world problems using algebraic methods.</li>
+                                <li>Gain confidence for more advanced mathematical studies.</li>
+                            </ul>
+                        </div>
+                        <div class="course-description-full">
+                            <h3><i class="fas fa-info-circle"></i> Course Description</h3>
+                             <p>This course provides a clear and comprehensive introduction to algebra, designed for beginners or those needing a refresh. We'll start with the basics, building blocks like variables and expressions, and gradually move to more complex topics such as linear equations, inequalities, polynomials, factoring, and an introduction to quadratic equations. Each concept is explained with practical examples and step-by-step solutions to ensure deep understanding.</p>
+                             <p>Whether you're a student looking to ace your math exams, an adult returning to education, or just someone who wants to strengthen their quantitative reasoning skills, this course is your ideal starting point. Embrace the power of algebra and discover how it applies to everyday situations!</p>
+                        </div>
+                        <div class="course-target-audience">
+                            <h3><i class="fas fa-user-friends"></i> Who this course is for?</h3>
+                            <ul>
+                                <li>Students in middle or high school preparing for algebra.</li>
+                                <li>Adult learners looking to refresh their math skills.</li>
+                                <li>Anyone needing a solid foundation in algebra for higher studies or career advancement.</li>
+                                <li>Individuals curious about the logic and application of algebraic concepts.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
