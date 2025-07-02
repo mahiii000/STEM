@@ -1,0 +1,304 @@
+/* CSS Variables for easy theme management */
+:root {
+    --primary-purple: #8338ec;
+    --light-purple: #e9deff;
+    --dark-text: #333;
+    --light-text: #666;
+    --border-color: #ddd;
+    --background-light: #fff;
+    --success-green: #28a745;
+    --sidebar-border: #f0f0f0;
+    --placeholder-text: #aaa;
+}
+
+/* General Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--dark-text);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevents whole page from scrolling */
+}
+
+/* Main App Layout */
+.app-content {
+    display: flex;
+    height: 100%;
+}
+
+/* --- Sidebar Navigation --- */
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--sidebar-border);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.sidebar-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--light-text);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--light-purple);
+    color: var(--primary-purple);
+}
+
+.sidebar-nav li.active a {
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+.sidebar-nav svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* --- Main Content & Form --- */
+.main-content {
+    flex-grow: 1;
+    padding: 2.5rem 4rem;
+    overflow-y: auto; /* Allow scrolling only on the form area */
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ★★★ UPDATED AVATAR STYLE ★★★ */
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffc107, #03a9f4);
+    position: relative; /* This is the key for positioning the button */
+}
+
+/* --- ★★★ NEW STYLES FOR AVATAR EDIT BUTTON ★★★ --- */
+.edit-avatar-btn {
+    /* Positioning */
+    position: absolute;
+    bottom: -2px; /* Position it slightly overlapping the bottom edge */
+    right: -2px;  /* Position it slightly overlapping the right edge */
+
+    /* Sizing & Shape */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%; /* Make the button circular */
+    
+    /* Appearance */
+    background-color: var(--background-light); /* Use your CSS variable */
+    border: 2px solid var(--background-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    
+    /* Center the icon inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Interactivity */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.edit-avatar-btn svg {
+    /* Style the pencil icon */
+    width: 14px;
+    height: 14px;
+    stroke: var(--dark-text); /* Use your CSS variable for the icon color */
+}
+
+.edit-avatar-btn:hover {
+    /* A nice little pop effect on hover */
+    transform: scale(1.1);
+}
+/* --- END OF NEW STYLES --- */
+
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.input-wrapper {
+    position: relative; /* Crucial for positioning icons inside */
+    display: flex;
+    align-items: center;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input::placeholder {
+    color: var(--placeholder-text);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 2px var(--light-purple);
+}
+
+/* Contact Number Specifics */
+.contact-number-group {
+    display: flex;
+}
+.contact-number-group .country-code {
+    flex-shrink: 0;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 120px;
+}
+.contact-number-group input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Custom Select Arrow */
+select {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+     background-repeat: no-repeat;
+     background-position: right 1rem center;
+     background-size: 1em;
+}
+
+/* Your existing icon styles */
+.input-icons {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.input-icons ~ input {
+    padding-left: 50px;
+}
+.toggle-password {
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+.toggle-password:hover {
+    color: #374151;
+}
+.validation-icon {
+    color: var(--success-green);
+    display: none;
+}
+
+/* Action Buttons */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel {
+    background-color: var(--background-light);
+    color: var(--primary-purple);
+    border: 2px solid var(--primary-purple);
+}
+
+.btn-cancel:hover {
+     background-color: var(--light-purple);
+}
+
+.btn-save {
+    background-color: var(--primary-purple);
+    color: white;
+    border: 2px solid var(--primary-purple);
+}
+
+.btn-save:hover {
+    opacity: 0.9;
+}
+
+/* Your other helper and custom select styles... */
+/* (I've omitted them for brevity but they should remain in your file) */

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teachers List - Bright Mind</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="teachers.css" />
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- 🔷 HEADER -->
+  <header class="banner">
+  <!-- Logo on the left -->
+  <div class="logo-area">
+    <img src="images/logo.png" alt="Bright Mind Logo" class="logo" />
+  </div>
+
+<!-- Icons in the center -->
+  <nav class="nav-icons">
+    <div class="icon-item" data-page="index">
+      <div class="icon-box">
+        <img src="images/home.png" alt="Home" />
+      </div>
+      <span class="label">Home</span>
+    </div>
+    <div class="icon-item" data-page="learning">
+      <div class="icon-box">
+        <img src="images/learning.png" alt="Learning" />
+      </div>
+      <span class="label">Learning</span>
+    </div>
+    <div class="icon-item active" data-page="teachers">
+      <div class="icon-box">
+        <img src="images/teachers.png" alt="Teachers" />
+      </div>
+      <span class="label">Teachers</span>
+    </div>
+    <div class="icon-item" data-page="blogs">
+      <div class="icon-box">
+        <img src="images/blogs.png" alt="Blog" />
+      </div>
+      <span class="label">Blog</span>
+    </div>
+  </nav>
+</header>
+
+  <!-- Teachers List -->
+  <section class="teachers-section">
+    <div class="teachers-header">
+      <h2>Teachers List</h2>
+
+      <div class="teachers-controls">
+        <input type="text" placeholder="Search" />
+        <select>
+          <option>Name</option>
+          <option>Rating</option>
+          <option>Country</option>
+        </select>
+      </div>
+    </div>
+
+    <table class="teachers-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Ratings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jane Cooper</td>
+          <td>Microsoft</td>
+          <td>(225) 555-0118</td>
+          <td>jane@microsoft.com</td>
+          <td>United States</td>
+          <td><span class="stars">★★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Floyd Miles</td>
+          <td>Yahoo</td>
+          <td>(205) 555-0100</td>
+          <td>floyd@yahoo.com</td>
+          <td>Kiribati</td>
+          <td><span class="stars">★★★★☆</span></td>
+        </tr>
+        <tr>
+          <td>Ronald Richards</td>
+          <td>Adobe</td>
+          <td>(302) 555-0107</td>
+          <td>ronald@adobe.com</td>
+          <td>Iraq</td>
+          <td><span class="stars">★★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Marvin McKinney</td>
+          <td>Tesla</td>
+          <td>(252) 555-0126</td>
+          <td>marvin@tesla.com</td>
+          <td>Iran</td>
+          <td><span class="stars">★★★★☆</span></td>
+        </tr>
+        <tr>
+          <td>Jerome Bell</td>
+          <td>Google</td>
+          <td>(629) 555-0129</td>
+          <td>jerome@google.com</td>
+          <td>Réunion</td>
+          <td><span class="stars">★★★★☆</span></td>
+        </tr>
+        <tr>
+          <td>Kathryn Murphy</td>
+          <td>Microsoft</td>
+          <td>(406) 555-0120</td>
+          <td>kathryn@microsoft.com</td>
+          <td>Curaçao</td>
+          <td><span class="stars">★★★☆☆</span></td>
+        </tr>
+        <tr>
+          <td>Jacob Jones</td>
+          <td>Yahoo</td>
+          <td>(208) 555-0112</td>
+          <td>jacob@yahoo.com</td>
+          <td>Brazil</td>
+          <td><span class="stars">★★★★★</span></td>
+        </tr>
+        <tr>
+          <td>Kristin Watson</td>
+          <td>Facebook</td>
+          <td>(704) 555-0127</td>
+          <td>kristin@facebook.com</td>
+          <td>Åland Islands</td>
+          <td><span class="stars">★★★☆☆</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="pagination-wrapper">
+  <div class="pagination">
+    <span>&lt;</span>
+    <span class="active">1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>...</span>
+    <span>40</span>
+    <span>&gt;</span>
+  </div>
+  <p class="table-footer">Showing data 1 to 8 of 256K entries</p>
+</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright Mind - Learning</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="learning.css" />
+</head>
+<body>
+
+  <!-- 🔷 HEADER -->
+  <header class="banner">
+  <!-- Logo on the left -->
+  <div class="logo-area">
+    <img src="images/logo.png" alt="Bright Mind Logo" class="logo" />
+  </div>
+
+  <!-- Icons in the center -->
+  <nav class="nav-icons">
+    <div class="icon-item" data-page="index">
+      <div class="icon-box">
+        <img src="images/home.png" alt="Home" />
+      </div>
+      <span class="label">Home</span>
+    </div>
+    <div class="icon-item active" data-page="learning">
+      <div class="icon-box">
+        <img src="images/learning.png" alt="Learning" />
+      </div>
+      <span class="label">Learning</span>
+    </div>
+    <div class="icon-item" data-page="teachers">
+      <div class="icon-box">
+        <img src="images/teachers.png" alt="Teachers" />
+      </div>
+      <span class="label">Teachers</span>
+    </div>
+    <div class="icon-item" data-page="blogs">
+      <div class="icon-box">
+        <img src="images/blogs.png" alt="Blog" />
+      </div>
+      <span class="label">Blog</span>
+    </div>
+  </nav>
+</header>
+
+<!-- 🔍 SEARCH SECTION -->
+ <section class="search-section">
+  <div class="search-wrapper">
+    <input type="text" placeholder="Search your favourite course" />
+    <button class="search-btn">Search</button>
+  </div>
+</section>
+
+<!-- 🔍 continue learing SECTION -->  
+
+<section class="continue-learning";>
+  <h2>Continue Learning</h2>
+  <div class="learning-grid" id="continue-grid">
+    
+  </div>
+</section>
+
+<!-- Lessons-->
+
+<section class="lessons">
+  <h2>Lessons</h2> 
+  <div class="lessons-controls">
+      <select id="lessons-sort-select">
+        <option disabled selected>Sort</option>
+        <option value="ALL">All</option>
+        <option value="SCIENCE">Science</option>
+        <option value="TECHNOLOGY">Technology</option>
+        <option value="ENGINEERING">Engineering</option>
+        <option value="MATH">Math</option>
+      </select>
+  </div>
+
+  <div class="learning-grid">
+    <!-- Card 1 -->
+    <div class="learning-card" data-topic="SCIENCE" id="lesson-science-1">
+      <div class="card-image" style="background-color: #6c5ce7;">
+        <span class="favorite" onclick="addToContinue(this, event)">&#10084;</span>
+      </div>
+      <span class="card-tag ">SCIENCE</span>
+      <h3 class="card-title">Science Experiments At Home</h3>
+      <div class="card-footer">
+        <div class="avatar red"></div>
+        <div class="instructor-info">
+          <div class="instructor-label">INSTRUCTOR</div>
+          <div class="instructor-sub">Ms.Lina George</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="learning-card" data-topic="ENGINEERING" id="lesson-engineering-1">
+      <div class="card-image" style="background-color: #ff9f43;">
+        <span class="favorite" onclick="addToContinue(this, event)">&#10084;</span>
+      </div>
+      <span class="card-tag">ENGINEERING</span>
+      <h3 class="card-title">Fun With Simple Machines</h3>
+      <div class="card-footer">
+        <div class="avatar red"></div>
+        <div class="instructor-info">
+          <div class="instructor-label">INSTRUCTOR</div>
+          <div class="instructor-sub">Ms.Lina George</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="learning-card" data-topic="TECHNOLOGY" id="lesson-technology-1">
+      <div class="card-image" style="background-color: #00cec9;" >
+        <span class="favorite" onclick="addToContinue(this, event)">&#10084;</span>
+      </div>
+      <span class="card-tag">TECHNOLOGY</span>
+      <h3 class="card-title">Basic Coding With Scratch</h3>
+      <div class="card-footer">
+        <div class="avatar red"></div>
+        <div class="instructor-info">
+          <div class="instructor-label">INSTRUCTOR</div>
+          <div class="instructor-sub">Ms.Lina George</div>
+        </div>
+      </div>
+    </div>
+
+  <div class="learning-card" data-topic="MATH" id="lesson-math-1">
+    <div class="card-image">
+      <span class="favorite" onclick="addToContinue(this, event)">&#10084;</span>
+    </div>
+    <span class="card-tag">MATH</span>
+    <h3 class="card-title">Introduction To Algebra</h3>
+    <div class="card-footer">
+      <div class="avatar red"></div>
+      <div class="instructor-info">
+        <div class="instructor-label">INSTRUCTOR</div>
+        <div class="instructor-sub">Ms.Lina George</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
