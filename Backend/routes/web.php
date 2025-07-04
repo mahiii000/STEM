@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\EngineeringController;
 
 
 Route::get('/signin', function () {
@@ -14,6 +15,12 @@ Route::get('/review', function () {
     return view('review');
 });
 
+Route::get('/engineering', function () {
+    return view('engineering');
+});
+
+
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/review', [ReviewController::class, 'submit'])->name('review.submit');
+Route::get('/engineering', [EngineeringController::class, 'index']);
