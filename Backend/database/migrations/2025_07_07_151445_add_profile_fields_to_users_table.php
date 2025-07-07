@@ -16,7 +16,6 @@ return new class extends Migration
         $table->string('last_name')->nullable();
         $table->string('country_code')->nullable();
         $table->string('contact_number')->nullable();
-        $table->string('address')->nullable();
         $table->string('emirate')->nullable();
         $table->string('area')->nullable();
         // Add any other fields you need
