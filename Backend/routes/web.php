@@ -36,7 +36,7 @@ Route::get('/science', function () {
 
 Route::get('/technology', [TechnologyController::class, 'show']);
 Route::get('/edit', [EditController::class, 'show']);
-
+Route::resource('profile', \App\Http\Controllers\EditController::class);
 Route::get('/science', [ScienceController::class, 'index']);
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
