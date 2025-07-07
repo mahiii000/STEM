@@ -1,13 +1,10 @@
-<?
-
+<?php
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 
 class EditController extends Controller
 {
     public function show()
     {
-        return view('edit');
+        return view('edit');  // loads resources/views/edit.blade.php
     }
 }
