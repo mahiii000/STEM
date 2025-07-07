@@ -111,7 +111,7 @@
                 <div class="form-group">
                     <label for="email">Email</label>
                     <div class="input-wrapper">
-                        <input type="email" name="email" id="email" placeholder="Enter Your Email" value="{{ old('email', $user->email) }}">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email" value="{{ old('email', $user->email ?? '') }}">
                         <div class="input-icons">
                             <div class="validation-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>
@@ -122,7 +122,7 @@
 
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" name="address" id="address" placeholder="Street" value="{{ old('address', $user->address) }}">
+                    <input type="text" name="address" id="address" placeholder="Street" value="{{ old('address', $user->address ?? '') }}">
                 </div>
 
                 <div class="form-group">
@@ -154,7 +154,7 @@
                             <option value="+1">🇺🇸 +1</option>
                             <option value="+44">🇬🇧 +44</option>
                         </select>
-                        <input type="tel" name="phone" id="contact-number" placeholder="Enter your number" value="{{ old('phone', $user->phone) }}">
+                        <input type="tel" name="phone" id="contact-number" placeholder="Enter your number" value="{{ old('phone', $user->phone) ?? ''}}">
                     </div>
                 </div>
 
