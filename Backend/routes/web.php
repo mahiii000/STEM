@@ -35,7 +35,7 @@ Route::get('/science', function () {
 
 
 Route::get('/technology', [TechnologyController::class, 'show']);
-Route::get('/edit', [EditController::class, 'show']);
+
 Route::get('/edit', [EditController::class, 'edit'])->name('profile.edit');
 Route::get('/science', [ScienceController::class, 'index']);
 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class EditController extends Controller
 {
-    public function show()
+    public function edit()
 {
     $user = auth()->user(); // or User::find($id) depending on your logic
     return view('edit', compact('user'));
