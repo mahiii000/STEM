@@ -158,6 +158,48 @@
   </footer>
 
     <script src="{{ asset('js/script.js') }}"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const subscribeBtn = document.querySelector('.newsletter button');
+        const emailInput = document.querySelector('.newsletter input[type="email"]');
+        const errorDiv = document.getElementById('newsletterError');
+        const successDiv = document.getElementById('newsletterSuccess');
+
+        subscribeBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const email = emailInput.value.trim();
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            errorDiv.style.display = 'none';
+            successDiv.style.display = 'none';
+            errorDiv.innerHTML = '';
+            successDiv.innerHTML = '';
+            if (window.newsletterTimeout) clearTimeout(window.newsletterTimeout);
+
+            if (!email) {
+                errorDiv.textContent = 'Field is Empty';
+                errorDiv.style.display = 'block';
+                window.newsletterTimeout = setTimeout(() => {
+                    errorDiv.style.display = 'none';
+                }, 5000);
+            } else if (!emailRegex.test(email)) {
+                errorDiv.textContent = 'Invalid Email Format';
+                errorDiv.style.display = 'block';
+                window.newsletterTimeout = setTimeout(() => {
+                    errorDiv.style.display = 'none';
+                }, 5000);
+            } else {
+                successDiv.textContent = 'Subscribed Successfully!';
+                successDiv.style.display = 'block';
+                emailInput.value = '';
+                window.newsletterTimeout = setTimeout(() => {
+                    successDiv.style.display = 'none';
+                }, 5000);
+            }
+        });
+    });
+</script>
   
 </body>
 </html>
