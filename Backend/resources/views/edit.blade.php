@@ -98,7 +98,8 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first-name">First Name</label>
-                        <input type="text" name="name" id="first-name" placeholder="Enter Your Name" value="{{ old('name', $user->name) }}">
+                        <input type="text" name="name" id="first-name" placeholder="Enter Your Name" value="{{ old('name', $user->name ?? '') }}"
+>
 
                     </div>
                     <div class="form-group">
