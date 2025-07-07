@@ -79,12 +79,27 @@
                     </a>
                 </div>
             </div>
+             @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
-            <form class="profile-form">
+@if (session('status'))
+    <div class="alert alert-success">{{ session('status') }}</div>
+@endif
+
+            <form class="profile-form" method="POST" action="{{ route('edit.update') }}">
+                 @csrf
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" placeholder="Enter Your Name">
+                        <input type="text" name="name" id="first-name" placeholder="Enter Your Name" value="{{ old('name', $user->name) }}">
+
                     </div>
                     <div class="form-group">
                         <label for="last-name">Last Name</label>
@@ -95,7 +110,7 @@
                 <div class="form-group">
                     <label for="email">Email</label>
                     <div class="input-wrapper">
-                        <input type="email" id="email" placeholder="Enter Your Email">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email" value="{{ old('email', $user->email) }}">
                         <div class="input-icons">
                             <div class="validation-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>
@@ -106,7 +121,7 @@
 
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" id="address" placeholder="Street">
+                    <input type="text" name="address" id="address" placeholder="Street" value="{{ old('address', $user->address) }}">
                 </div>
 
                 <div class="form-group">
@@ -138,7 +153,7 @@
                             <option value="+1">🇺🇸 +1</option>
                             <option value="+44">🇬🇧 +44</option>
                         </select>
-                        <input type="tel" id="contact-number" placeholder="Enter your number">
+                        <input type="tel" name="phone" id="contact-number" placeholder="Enter your number" value="{{ old('phone', $user->phone) }}">
                     </div>
                 </div>
 
@@ -165,7 +180,7 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <div class="input-wrapper">
-                        <input type="password" id="password" placeholder="At least 8 characters">
+                        <input type="password" name="password" id="password" placeholder="At least 8 characters">east 8 characters">
                         <div class="input-icons">
                             <div class="validation-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>
@@ -177,7 +192,7 @@
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password</label>
                     <div class="input-wrapper">
-                        <input type="password" id="confirm-password" placeholder="Confirm your password">
+                        <input type="password" name="password_confirmation" id="confirm-password" placeholder="Confirm your password">
                         <div class="input-icons">
                             <div class="validation-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>

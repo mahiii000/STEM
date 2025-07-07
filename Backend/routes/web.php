@@ -35,8 +35,8 @@ Route::get('/science', function () {
 
 
 Route::get('/technology', [TechnologyController::class, 'show']);
-Route::get('/edit', [EditController::class, 'show']);
-
+Route::get('/edit', [EditController::class, 'show'])->name('edit');
+Route::post('/edit', [EditController::class, 'update'])->name('edit.update');
 Route::get('/science', [ScienceController::class, 'index']);
 
 Route::post('/register', [AuthController::class, 'register'])->name('register');
