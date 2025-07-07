@@ -148,6 +148,12 @@
         <input type="email" placeholder="Your Email">
         <button>Subscribe</button>
       </div>
+
+      <div id="newsletterError" style="display:none;position:fixed;top:90px;left:50%;transform:translateX(-50%);background:#fff3f3;color:#d8000c;border:1px solid #d8000c;padding:16px 32px;z-index:9999;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-size:16px;min-width:300px;max-width:90%;text-align:left;" role="alert"></div>
+      <div id="newsletterSuccess" style="display:none;position:fixed;top:90px;left:50%;transform:translateX(-50%);background:#e6ffed;color:#207d3a;border:1px solid #207d3a;padding:16px 32px;z-index:9999;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-size:16px;min-width:300px;max-width:90%;text-align:left;" role="alert"></div>
+
+
+
       <div class="footer-links">
         <a href="#">Careers</a> |
         <a href="#">Privacy Policy</a> |
@@ -159,47 +165,50 @@
 
     <script src="{{ asset('js/script.js') }}"></script>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const subscribeBtn = document.querySelector('.newsletter button');
-        const emailInput = document.querySelector('.newsletter input[type="email"]');
-        const errorDiv = document.getElementById('newsletterError');
-        const successDiv = document.getElementById('newsletterSuccess');
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const subscribeBtn = document.querySelector('.newsletter button');
+    const emailInput = document.querySelector('.newsletter input[type="email"]');
+    const errorDiv = document.getElementById('newsletterError');
+    const successDiv = document.getElementById('newsletterSuccess');
 
-        subscribeBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            const email = emailInput.value.trim();
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    subscribeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-            errorDiv.style.display = 'none';
-            successDiv.style.display = 'none';
-            errorDiv.innerHTML = '';
-            successDiv.innerHTML = '';
-            if (window.newsletterTimeout) clearTimeout(window.newsletterTimeout);
+      errorDiv.style.display = 'none';
+      errorDiv.innerHTML = '';
+      successDiv.style.display = 'none';
+      successDiv.innerHTML = '';
 
-            if (!email) {
-                errorDiv.textContent = 'Field is Empty';
-                errorDiv.style.display = 'block';
-                window.newsletterTimeout = setTimeout(() => {
-                    errorDiv.style.display = 'none';
-                }, 5000);
-            } else if (!emailRegex.test(email)) {
-                errorDiv.textContent = 'Invalid Email Format';
-                errorDiv.style.display = 'block';
-                window.newsletterTimeout = setTimeout(() => {
-                    errorDiv.style.display = 'none';
-                }, 5000);
-            } else {
-                successDiv.textContent = 'Subscribed Successfully!';
-                successDiv.style.display = 'block';
-                emailInput.value = '';
-                window.newsletterTimeout = setTimeout(() => {
-                    successDiv.style.display = 'none';
-                }, 5000);
-            }
-        });
+      if (window.newsletterTimeout) clearTimeout(window.newsletterTimeout);
+
+      if (!email) {
+        errorDiv.textContent = 'Field is Empty';
+        errorDiv.style.display = 'block';
+        window.newsletterTimeout = setTimeout(() => {
+          errorDiv.style.display = 'none';
+        }, 5000);
+      } else if (!emailRegex.test(email)) {
+        errorDiv.textContent = 'Invalid Email Format';
+        errorDiv.style.display = 'block';
+        window.newsletterTimeout = setTimeout(() => {
+          errorDiv.style.display = 'none';
+        }, 5000);
+      } else {
+        successDiv.textContent = 'Subscribed Successfully!';
+        successDiv.style.display = 'block';
+        emailInput.value = '';
+        window.newsletterTimeout = setTimeout(() => {
+          successDiv.style.display = 'none';
+        }, 5000);
+      }
     });
+  });
 </script>
+
+
   
 </body>
 </html>
