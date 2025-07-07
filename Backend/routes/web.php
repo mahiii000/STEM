@@ -35,4 +35,4 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/review', [ReviewController::class, 'submit'])->name('review.submit');
 Route::get('/engineering', [EngineeringController::class, 'index']);
 Route::get('/math', [App\Http\Controllers\PageController::class, 'math'])->name('math');
-Route::get('/science', [ScienceController::class, 'index'])->name('science');
+Route::get('/science', [ScienceController::class, 'index']);
