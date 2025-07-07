@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\EngineeringController;
+use App\Http\Controllers\ScienceController;
 
 
 Route::get('/signin', function () {
@@ -24,7 +25,14 @@ Route::get('/math', function () {
 });
 
 
+
+Route::get('/science', function () {
+    return view('science');
+});
+
+
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/review', [ReviewController::class, 'submit'])->name('review.submit');
 Route::get('/engineering', [EngineeringController::class, 'index']);
 Route::get('/math', [App\Http\Controllers\PageController::class, 'math'])->name('math');
+Route::get('/science', [ScienceController::class, 'index'])->name('science');
