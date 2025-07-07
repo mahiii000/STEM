@@ -10,10 +10,11 @@ use Illuminate\Validation\Rule;
 class EditController extends Controller
 {
     public function show()
-    {
-        $user = Auth::user(); // Get the currently logged-in user
-        return view('edit', compact('user'));
-    }
+{
+    $user = auth()->user(); 
+    return view('edit', compact('user')); 
+}
+
 
     public function update(Request $request)
     {
