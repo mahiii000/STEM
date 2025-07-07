@@ -31,6 +31,10 @@ Route::get('/science', function () {
 });
 
 
+use App\Http\Controllers\TechnologyController;
+
+Route::get('/technology', [TechnologyController::class, 'show']);
+
 
 Route::get('/science', [ScienceController::class, 'index']);
 
