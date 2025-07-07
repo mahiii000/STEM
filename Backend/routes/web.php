@@ -5,7 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\EngineeringController;
 use App\Http\Controllers\ScienceController;
-
+use App\Http\Controllers\TechnologyController;
 
 Route::get('/signin', function () {
     return view('signin'); // shows signin.blade.php
@@ -31,7 +31,7 @@ Route::get('/science', function () {
 });
 
 
-use App\Http\Controllers\TechnologyController;
+
 
 Route::get('/technology', [TechnologyController::class, 'show']);
 
