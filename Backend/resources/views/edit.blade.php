@@ -68,7 +68,7 @@
                 </div>
             @endif
 
-            <form class="profile-form" method="POST" action="{{ route('profile.update', $user->id) }}">
+            <form method="POST" action="{{ route('profile.update', $user->id) }}">
                 @csrf
                 @method('PUT')
                 <div class="form-row">
