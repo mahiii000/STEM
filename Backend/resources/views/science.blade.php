@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bright Minds - Science</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -16,32 +16,32 @@
   <header class="banner">
   <!-- Logo on the left -->
   <div class="logo-area">
-    <img src="images/logo.png" alt="Bright Mind Logo" class="logo" />
+    <img src="{{ asset('images/logo.png') }}" alt="Bright Mind Logo" class="logo" />
   </div>
 
 <!-- Icons in the center -->
   <nav class="nav-icons">
     <div class="icon-item active" data-page="index">
       <div class="icon-box">
-        <img src="images/home.png" alt="Home" />
+        <img src="{{ asset('images/home.png') }}" alt="Home" />
       </div>
       <span class="label">Home</span>
     </div>
     <div class="icon-item" data-page="learning">
       <div class="icon-box">
-        <img src="images/learning.png" alt="Learning" />
+        <img src="{{ asset('images/learning.png') }}" alt="Learning" />
       </div>
       <span class="label">Learning</span>
     </div>
     <div class="icon-item" data-page="teachers">
       <div class="icon-box">
-        <img src="images/teachers.png" alt="Teachers" />
+        <img src="{{ asset('images/teachers.png') }}" alt="Teachers" />
       </div>
       <span class="label">Teachers</span>
     </div>
     <div class="icon-item" data-page="blogs">
       <div class="icon-box">
-        <img src="images/blogs.png" alt="Blog" />
+        <img src="{{ asset('images/blogs.png') }}" alt="Blog" />
       </div>
       <span class="label">Blog</span>
     </div>
@@ -89,25 +89,25 @@
       <div class="topic-grid">
         <div class="topic-card">
           <a href="https://en.wikipedia.org/wiki/Outer_space" target="_blank" rel="noopener noreferrer">
-            <img src="images/outer-space.webp" alt="Space" />
+            <img src="{{ asset('images/outer-space.webp') }}" alt="Space" />
           </a>
           <p>Outer Space</p>
         </div>
         <div class="topic-card">
           <a href="https://en.wikipedia.org/wiki/Animal" target="_blank" rel="noopener noreferrer">
-            <img src="images/animals.webp" alt="Animals" />
+            <img src="{{ asset('images/animals.webp') }}" alt="Animals" />
           </a>
           <p>Animals</p>
         </div>
         <div class="topic-card">
           <a href="https://en.wikipedia.org/wiki/Plant" target="_blank" rel="noopener noreferrer">
-            <img src="images/plants.jpg" alt="Plants" />
+            <img src="{{ asset('images/plants.jpg') }}" alt="Plants" />
           </a>
           <p>Plants</p>
         </div>
         <div class="topic-card">
           <a href="https://en.wikipedia.org/wiki/Invention" target="_blank" rel="noopener noreferrer">
-            <img src="images/cool-inventions.avif" alt="Inventions" />
+            <img src="{{ asset('images/cool-inventions.avif') }}" alt="Inventions" />
           </a>
           <p>Cool Inventions</p>
         </div>
@@ -135,10 +135,10 @@
     <div class="footer-left">
       <p>Follow Us</p>
       <div class="social-icons">
-        <img src="images/x-logo.png" alt="X">
-        <img src="images/ig-logo.png" alt="Instagram">
-        <img src="images/yt-logo.png" alt="YouTube">
-        <img src="images/linkedin-logo.png" alt="LinkedIn">
+        <img src="{{ asset('images/x-logo.png') }}" alt="X">
+        <img src="{{ asset('images/ig-logo.png') }}" alt="Instagram">
+        <img src="{{ asset('images/yt-logo.png') }}" alt="YouTube">
+        <img src="{{ asset('images/linkedin-logo.png') }}" alt="LinkedIn">
       </div>
     </div>
 
@@ -157,7 +157,7 @@
     </div>
   </footer>
 
-    <script src="script.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
   
 </body>
 </html>
