@@ -9,23 +9,20 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
-{
-    Schema::table('users', function (Blueprint $table) {
-        $table->string('first_name')->nullable();
-        $table->string('last_name')->nullable();
-        $table->string('country_code')->nullable();
-        $table->string('contact_number')->nullable();
-        $table->string('emirate')->nullable();
-        $table->string('area')->nullable();
-        // Add any other fields you need
-    });
-}
+    public function up(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
+    }
 
-public function down()
-{
-    Schema::table('users', function (Blueprint $table) {
-        $table->dropColumn(['first_name', 'last_name', 'country_code', 'contact_number', 'address', 'emirate', 'area']);
-    });
-}
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
+    }
 };

@@ -35,10 +35,10 @@ Route::get('/science', function () {
 
 
 Route::get('/technology', [TechnologyController::class, 'show']);
+Route::get('/edit', [EditController::class, 'show']);
 
-Route::get('/edit', [EditController::class, 'edit'])->name('profile.edit');
 Route::get('/science', [ScienceController::class, 'index']);
-Route::put('/profile/update/{id}', [App\Http\Controllers\EditController::class, 'update'])->name('profile.update');
+
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/review', [ReviewController::class, 'submit'])->name('review.submit');
 Route::get('/engineering', [EngineeringController::class, 'index']);
