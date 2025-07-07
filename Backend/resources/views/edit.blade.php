@@ -154,7 +154,7 @@
                             <option value="+1">🇺🇸 +1</option>
                             <option value="+44">🇬🇧 +44</option>
                         </select>
-                        <input type="tel" name="phone" id="contact-number" placeholder="Enter your number" value="{{ old('phone', $user->phone) ?? ''}}">
+                        <input type="tel" name="phone" id="contact-number" placeholder="Enter your number" value="{{ old('phone', $user->phone) ?? '') }}">
                     </div>
                 </div>
 
