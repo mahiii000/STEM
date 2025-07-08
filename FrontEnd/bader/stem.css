@@ -1,237 +1,328 @@
-/* --- GENERAL SETUP & FONT IMPORT --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+:root {
+  --primary-purple: #C7B9F1;
+  --light-purple-bg: #F3F0FA;
+  --dark-purple-text: #6D28D9;
+  --active-orange: #FFA200;
+  --inactive-gray: #D1D5DB;
+  --text-dark: #333;
+  --text-light: #666;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: var(--text-dark);
 }
 
-/* --- ★★★ CONTROL THE OVERALL PAGE/BOX WIDTH HERE ★★★ --- */
 .page-container {
-    /* Controls the max width of the content area */
-    max-width: 1200px;         /* Increase or decrease as needed */
-    width: 100%;               /* Allows it to scale fluidly on smaller screens */
-
-    margin: 40px auto;         /* ★ Perfectly centers the box horizontally */
-    padding: 0 20px;           /* ★ Optional: adds left/right spacing inside */
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft outer shadow */
-    background-color: #f0f2f5;                 /* Match background */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* -------------------------------------------------------- */
-
-
-/* --- HEADER SECTION (No changes here) --- */
+/* HEADER */
 .main-header {
-    background-color: #C7B9F1;
-    color: white;
-    padding: 50px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top-left-radius: 12px; /* Rounds the corners to match the card */
-    border-top-right-radius: 12px;
+  background-color: var(--primary-purple);
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  /* === CODE CHANGED HERE === */
+  /* Changed from 'center' to 'flex-start' to move items to the top */
+  align-items: flex-start;
+  padding: 40px 50px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 44px;
+  font-weight: 700;
+  color: white;
 }
 
 .logo img {
-    height: 100px; /* Or increase if needed */
-    width: 100px;
-    object-fit: contain;
+  height: 120px;
+  width: auto;
 }
-
-
 
 .main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
-.main-nav ul li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F3F4F6;
-    color: #333;
-    width: 55px;
-    height: 55px;
-    border-radius: 14px;
-    transition: background-color 0.2s;
-    text-decoration: none;
+
+.main-nav a {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  transition: transform 0.3s;
 }
-.main-nav ul li a:hover {
-    background-color: #E5E7EB;
-}
+
 .main-nav a img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
+} 
+
+.main-nav a:hover {
+  transform: translateY(-5px);
 }
+
 .edit-button {
-    background-color: #F3F4F6;
-    border: none;
-    color: #1F2937;
-    padding: 10px 35px;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  background-color: white;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
+
 .edit-button:hover {
-    background-color: #E5E7EB;
+  background-color: #f0f2f5;
 }
 
-
-/* --- CONTENT AND PROFILE CARD --- */
+/* CONTENT */
 .content-area {
-    padding-bottom: 40px;
+  position: relative;
+  top: -80px;
+  z-index: 10;
+  padding: 0 30px 50px 30px;
 }
 
-/* --- ★★★ CONTROL THE WHITE BOX POSITION HERE ★★★ --- */
 .profile-card {
-    position: relative;
-    
-    margin-top: -20px;
-    margin-right: -20px;
-    margin-bottom: 0;
-    margin-left: -20px; /* ★ This moves the box to the left */ 
-    padding: 70px 40px 40px 40px;
-    
-    background-color: white;
-    border-radius: 16px; /* Made corners a bit more rounded */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    text-align: center;
-}
-/* --------------------------------------------------- */
-
-
-.Profile-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin: 0 auto;
-    position: absolute;
-    top: -40px; /* Positions avatar half on/half off the card's top edge */
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-    background-color: #333; /* Dark background for silhouette */
+  background-color: white;
+  border-radius: 16px;
+  padding: 60px 20px 30px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
-.Profile-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 20;
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid white;
+  margin: -120px auto 20px auto;
+  background-color: var(--primary-purple);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile-name {
-    margin-top: 10px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
 }
 
 .profile-grade {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px; /* Added more space below the grade */
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 25px;
 }
 
-/* --- ACHIEVEMENTS SECTION --- */
 .achievements-section {
-    margin-top: 30px;
-    text-align: left;
+  background-color: var(--light-purple-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
 }
 
-.achievements-section h3,
+.achievements-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 .achievements-section > p {
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px; /* Increased space */
-    font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .badge-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Increased space between badges */
-    margin-top: 10px;
-    padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .badge-image {
-    height: 100px;
-    width: 100px;
-    object-fit: contain;
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%; 
+  transition: transform 0.3s ease;
 }
 
-.certificates-text {
-    font-weight: 600;
-    font-size: 16px;
-    margin-top: 25px; /* Increased space */
+.badge-image:hover {
+  transform: scale(1.15);
 }
 
-.purple-text {
-    color: #8b5cf6;
-    font-weight: 700;
-}
-/* --- NEW CSS FOR ICONS --- */
-
-/* This class will be toggled by JS to hide/show SVG paths */
-.is-hidden {
-    display: none;
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
 }
 
-/* Container to hold both the toggle and validation icons */
-.input-icons {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between the eye and the checkmark */
+.card-title-main {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-/* Style the new toggle-password eye icon */
-.toggle-password {
-    color: #999; /* A neutral gray color */
-    cursor: pointer; /* Makes it look clickable */
-    transition: color 0.2s;
+.daily-streak-tracker {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
-.toggle-password:hover {
-    color: #333; /* Darken on hover */
+.day-item p {
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 10px;
 }
 
-/* The existing validation icon (we just rename the class in HTML) */
-.validation-icon {
-    color: var(--success-green); /* Uses the color from your existing variables */
+.day-item i {
+  font-size: 2.2rem;
 }
 
-/* Adjust the main icon wrapper since we moved its contents */
-.input-wrapper .icon {
-    display: flex; /* Ensures the SVG inside is aligned */
+.active {
+  color: var(--active-orange);
 }
 
-select.country-code option::before {
-    content: url('https://flagcdn.com/16x12/ae.png');
-    margin-right: 8px;
+.inactive {
+  color: var(--inactive-gray);
+}
+
+.streak-stats-container {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-box {
+  flex: 1;
+  background-color: var(--light-purple-bg);
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+}
+
+.stat-box p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-box.buy-saver .stat-value {
+  color: var(--dark-purple-text);
+  cursor: pointer;
+}
+
+.bottom-cards-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.course-progress-card,
+.certificates-card {
+  flex: 1 1 45%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all-link {
+  font-size: 14px;
+  color: var(--primary-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+.item-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.course-item,
+.certificate-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.course-item:last-child,
+.certificate-item:last-child {
+  border-bottom: none;
+}
+
+.status-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.status-circle.color-purple { background-color: #A78BFA; }
+.status-circle.color-green { background-color: #34D399; }
+.status-circle.color-red { background-color: #F87171; }
+
+.course-details .item-title {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.item-status {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.certificate-img {
+  width: 80px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
 }
