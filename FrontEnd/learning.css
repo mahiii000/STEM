@@ -2,7 +2,7 @@
 .search-section {
   position: relative;
   height: 280px; /* Increased height */
-  background: url('../images/picture1.jpg') center/cover no-repeat;
+  background: url('/FrontEnd/images/picture1.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .search-section {
-  background: url('../images/picture1.jpg') center/cover no-repeat;
+  background: url('/FrontEnd/images/picture1.jpg') center/cover no-repeat;
   height: 280px;
   display: flex;
   justify-content: center;
