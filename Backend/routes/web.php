@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 // Root route - this is the one that loads at http://127.0.0.1:8000/
 Route::get('/', function () {
@@ -45,3 +46,8 @@ Route::get('/technology', [App\Http\Controllers\TechnologyController::class, 'sh
 Route::get('/review', function () {
     return view('review'); // Make sure review.blade.php exists in resources/views
 })->name('review');
+
+
+
+
+Route::get('/', [HomeController::class, 'index']);
