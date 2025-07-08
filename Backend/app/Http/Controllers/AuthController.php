@@ -45,4 +45,22 @@ class AuthController extends Controller
         // Redirect to login page with success message
         return redirect()->route('signin')->with('status', 'Registration successful! Please log in.');
     }
+
+    // Login method
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required', 'string'],
+        ]);
+
+        if (auth()->attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->route('home.index'); // Redirect to home page after login
+        }
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->withInput();
+    }
 }

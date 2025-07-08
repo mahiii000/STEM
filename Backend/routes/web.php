@@ -18,6 +18,9 @@ Route::get('/signin', function () {
 // Register POST route handled by AuthController
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
+// Login POST route handled by AuthController
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
 // EditController routes
 Route::get('/edit', [App\Http\Controllers\EditController::class, 'show'])->name('edit.show');
 Route::post('/edit', [App\Http\Controllers\EditController::class, 'update'])->name('edit.update');
@@ -48,6 +51,5 @@ Route::get('/review', function () {
 })->name('review');
 
 
-
-
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');

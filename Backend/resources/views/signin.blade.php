@@ -202,7 +202,8 @@
       </div>
 
       <!-- Login Form -->
-      <form id="login-form" class="active">
+      <form id="login-form" class="active" method="POST" action="{{ route('login') }}">
+        @csrf
         <div class="form-heading">Welcome Back!</div>
         @if (session('status'))
           <div class="alert alert-success" style="margin: 30px 0 15px 0;">
@@ -210,10 +211,10 @@
           </div>
         @endif
         <label for="login-email">Email<span class="required">*</span></label>
-        <input type="email" id="login-email" placeholder="mail@mail.com" required />
+        <input type="email" id="login-email" name="email" placeholder="mail@mail.com" required />
 
         <label for="login-password">Password<span class="required">*</span></label>
-        <input type="password" id="login-password" placeholder="Password" required />
+        <input type="password" id="login-password" name="password" placeholder="Password" required />
 
         <div class="checkbox-row">
           <input type="checkbox" onclick="togglePassword('login-password')" /> 
