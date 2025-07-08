@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bright Minds</title>
+    <link rel="stylesheet" href="home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <img src="images/bright-mind-logo.png" alt="Bright Mind Logo" class="logo-img">
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-center">
+                <ul class="nav-icons">
+                    <li>
+                        <div class="icon-box"><img src="images/home-icon.png" alt="Home"></div>
+                        <p>Home</p>
+                    </li>
+                    <li>
+                        <div class="icon-box"><img src="images/learning-icon.png" alt="Learning"></div>
+                        <p>Learning</p>
+                    </li>
+                    <li>
+                        <div class="icon-box"><img src="images/teaching-icon.png" alt="Teachers"></div>
+                        <p>Teachers</p>
+                    </li>
+                    <li>
+                        <div class="icon-box"><img src="images/blog-icon.png" alt="Blogs"></div>
+                        <p>Blogs</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-auth">
+                <div class="language-buttons">
+                    <button>Ar</button>
+                    <button class="active">Eng</button>
+                </div>
+                <div class="account-info">
+                    <img src="images/account.png" alt="User Avatar" class="user-avatar">
+                    <span class="account-label">Account</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/for-parents.jpg" alt="For Parents">
+            <div class="overlay dark">
+                <h2>For Parents</h2>
+                <button class="discover-btn">Discover</button>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="images/for-students.jpg" alt="For Students">
+            <div class="overlay dark">
+                <h2>For Students</h2>
+                <button class="discover-btn">Discover</button>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="images/for-educators.webp" alt="For Educators">
+            <div class="overlay dark">
+                <h2>For Educators</h2>
+                <button class="discover-btn">Discover</button>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="images/for-schools.jpg" alt="For Schools">
+            <div class="overlay dark">
+                <h2>For Schools</h2>
+                <button class="discover-btn">Discover</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Continue Learning Section -->
+    <section class="continue-learning-section">
+        <h2>Continue Learning</h2>
+
+        <!-- Arrows Positioned Above -->
+        <div class="carousel-nav top">
+            <button class="nav-btn prev">⟨</button>
+            <button class="nav-btn next">⟩</button>
+        </div>
+
+        <div class="continue-carousel">
+            <!-- Course Card 1 -->
+            <div class="course-card">
+                <div class="course-thumbnail" style="background-image: url('images/frontend.jpg');"></div>
+                <span class="course-category">Frontend</span>
+                <h3>Beginner’s Guide To Becoming A Professional Frontend Developer</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+                <div class="instructor-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <p class="instructor-label">Instructor</p>
+                        <p class="subject-label">Web Dev</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="course-card">
+                <div class="course-thumbnail" style="background-image: url('images/physics.jpg');"></div>
+                <span class="course-category">Science</span>
+                <h3>Exploring Basic Physics Concepts</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 45%;"></div>
+                </div>
+                <div class="instructor-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <p class="instructor-label">Instructor</p>
+                        <p class="subject-label">Physics</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="course-card">
+                <div class="course-thumbnail" style="background-image: url('images/cs.jpg');"></div>
+                <span class="course-category">Tech</span>
+                <h3>Computer Science Fundamentals</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 30%;"></div>
+                </div>
+                <div class="instructor-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <p class="instructor-label">Instructor</p>
+                        <p class="subject-label">CS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="course-card">
+                <div class="course-thumbnail" style="background-image: url('images/algebra.jpg');"></div>
+                <span class="course-category">Math</span>
+                <h3>Introduction to Algebra</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+                <div class="instructor-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <p class="instructor-label">Instructor</p>
+                        <p class="subject-label">Mathematics</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 5 -->
+            <div class="course-card">
+                <div class="course-thumbnail" style="background-image: url('images/robotics.jpg');"></div>
+                <span class="course-category">Engineering</span>
+                <h3>Introduction to Robotics and Automation</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <div class="instructor-info">
+                    <div class="avatar"></div>
+                    <div>
+                        <p class="instructor-label">Instructor</p>
+                        <p class="subject-label">Robotics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEM Interactive SVG Wheel (merged content) -->
+    <div class="container">
+        <div class="text-box">
+            <p id="desc">
+                Math is more than just numbers. It helps us understand patterns, solve problems, and make sense of the
+                world
+                around us. From designing buildings to coding apps, math is at the core of every great idea.
+            </p>
+            <button class="explore-btn" id="explore">Explore Math</button>
+        </div>
+
+        <div class="svg-container">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <!-- Curved paths for each label -->
+                    <path id="path-math" d="M0,-70 A70,70 0 0,1 70,0" fill="none" />
+                    <path id="path-science" d="M70,0 A70,70 0 0,1 0,70" fill="none" />
+                    <path id="path-engineering" d="M0,70 A70,70 0 0,1 -70,0" fill="none" />
+                    <path id="path-tech" d="M-70,0 A70,70 0 0,1 0,-70" fill="none" />
+                </defs>
+
+                <!-- Center wheel at (200,200) -->
+                <g id="wheel" transform="translate(200,200) rotate(0)">
+                    <!-- Math Segment -->
+                    <path class="segment" d="M0,-100 A100,100 0 0,1 100,0 L60,0 A60,60 0 0,0 0,-60 Z" fill="#fd8d92"
+                        data-index="0" data-color="#fd8d92" />
+
+                    <!-- Science Segment -->
+                    <path class="segment" d="M100,0 A100,100 0 0,1 0,100 L0,60 A60,60 0 0,0 60,0 Z" fill="#80ccff"
+                        data-index="1" data-color="#80ccff" />
+
+                    <!-- Engineering Segment -->
+                    <path class="segment" d="M0,100 A100,100 0 0,1 -100,0 L-60,0 A60,60 0 0,0 0,60 Z" fill="#8affb3"
+                        data-index="2" data-color="#8affb3" />
+
+                    <!-- Tech Segment -->
+                    <path class="segment" d="M-100,0 A100,100 0 0,1 0,-100 L0,-60 A60,60 0 0,0 -60,0 Z" fill="#ffe680"
+                        data-index="3" data-color="#ffe680" />
+
+                    <!-- Curved labels -->
+                    <text font-size="16" fill="#000">
+                        <textPath href="#path-math" startOffset="50%" text-anchor="middle">Math</textPath>
+                    </text>
+                    <text font-size="16" fill="#000">
+                        <textPath href="#path-science" startOffset="50%" text-anchor="middle">Science</textPath>
+                    </text>
+                    <text font-size="16" fill="#000">
+                        <textPath href="#path-engineering" startOffset="50%" text-anchor="middle">Engineering</textPath>
+                    </text>
+                    <text font-size="16" fill="#000">
+                        <textPath href="#path-tech" startOffset="50%" text-anchor="middle">Tech</textPath>
+                    </text>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="testimonial-left">
+            <h5>TESTIMONIAL</h5>
+            <h2>What Do They Say?</h2>
+            <p>
+                TOTC has got more than 100k positive ratings from our users around the world.
+                Some of the students and teachers were greatly helped by the Skilline.
+                <br><br>
+                Are you too? Please give your assessment
+            </p>
+            <a href="review.html" class="cta-button">Write your assessment</a>
+        </div>
+
+        <div class="testimonial-right">
+            <div class="testimonial-slideshow">
+
+                <!-- Slide 1 -->
+                <div class="testimonial-slide active">
+                    <img src="images/smiling-student.jpg" class="testimonial-image" alt="Student 1" />
+                    <div class="testimonial-box">
+                        <p>"Thank you so much for your help. It’s exactly what I’ve been looking for."</p>
+                        <h4>Gloria Rose</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <span class="review-source">12 reviews at Google</span>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <img src="images/smiling-student2.avif" class="testimonial-image" alt="Student 2" />
+                    <div class="testimonial-box">
+                        <p>"Skilline helped me organize my learning path and stay consistent."</p>
+                        <h4>Daniel Kim</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <span class="review-source">8 reviews at Trustpilot</span>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <img src="images/smiling-student3.jpg" class="testimonial-image" alt="Student 3" />
+                    <div class="testimonial-box">
+                        <p>"The support and content are amazing. I recommend it to all learners!"</p>
+                        <h4>Sophia Martinez</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <span class="review-source">15 reviews at Capterra</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--About Us Section -->
+    <section class="about-section">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>
+                Bright Minds is where curiosity meets creativity. We're a student-led initiative focused on reimagining
+                how
+                education works — making it more inclusive, interactive, and inspiring. Our goal? To help every learner
+                unlock
+                their full potential.
+            </p>
+        </div>
+
+        <div class="about-carousel-wrapper">
+            <div class="about-carousel">
+                <img src="images/aboutus1.webp" alt="Slide 1" />
+                <img src="images/aboutus2.jpg" alt="Slide 2" />
+                <img src="images/aboutus3.avif" alt="Slide 3" />
+                <img src="images/aboutus4.jpg" alt="Slide 4" />
+                <img src="images/aboutus5.jpg" alt="Slide 5" />
+                <img src="images/aboutus6.webp" alt="Slide 6" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="custom-footer">
+        <div class="footer-left">
+            <p>Follow Us</p>
+            <div class="social-icons">
+                <img src="images/x-logo.png" alt="X">
+                <img src="images/ig-logo.png" alt="Instagram">
+                <img src="images/yt-logo.png" alt="YouTube">
+                <img src="images/linkedin-logo.png" alt="LinkedIn">
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h3>Subscribe to get our Newsletter</h3>
+            <div class="newsletter">
+                <input type="email" placeholder="Your Email">
+                <button>Subscribe</button>
+            </div>
+            <div class="footer-links">
+                <a href="#">Careers</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <p class="copyright">© 2025 AURAK & RIT STUDENTS</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // HERO SECTION SLIDESHOW
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                const slides = document.getElementsByClassName("slide");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000);
+            }
+
+            // ABOUT US SLIDESHOW
+            let aboutSlideIndex = 0;
+            showAboutSlides();
+
+            function showAboutSlides() {
+                const aboutSlides = document.getElementsByClassName("about-slide");
+                for (let i = 0; i < aboutSlides.length; i++) {
+                    aboutSlides[i].style.display = "none";
+                }
+                aboutSlideIndex++;
+                if (aboutSlideIndex > aboutSlides.length) {
+                    aboutSlideIndex = 1;
+                }
+                aboutSlides[aboutSlideIndex - 1].style.display = "block";
+                setTimeout(showAboutSlides, 3000);
+            }
+
+            // === TESTIMONIALS SLIDESHOW ===
+            const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+            let testimonialIndex = 0;
+
+            function showTestimonialSlide(index) {
+                testimonialSlides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+
+            function nextTestimonialSlide() {
+                testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
+                showTestimonialSlide(testimonialIndex);
+            }
+
+            showTestimonialSlide(testimonialIndex);
+            setInterval(nextTestimonialSlide, 3000);
+
+            // STEM INTERACTIVE WHEEL
+            const segments = document.querySelectorAll('.segment');
+            const desc = document.getElementById('desc');
+            const btn = document.getElementById('explore');
+            const wheel = document.getElementById('wheel');
+            const descBox = document.querySelector('.text-box');
+
+            const data = [
+                {
+                    text: "Math is more than just numbers. It helps us understand patterns, solve problems, and make sense of the world around us. From designing buildings to coding apps, math is at the core of every great idea.",
+                    label: "Explore Math",
+                    color: "#fd8d92",
+                    url: "math.html"
+                },
+                {
+                    text: "Science helps us ask big questions and find meaningful answers. It explains how things work, from the tiniest atoms to the largest galaxies. Through hands-on discovery, science fuels innovation and progress.",
+                    label: "Dive into Science",
+                    color: "#80ccff",
+                    url: "science.html"
+                },
+                {
+                    text: "Engineering is about building, designing, and solving real-world problems. From bridges to software, it's where innovation comes to life!",
+                    label: "Explore Engineering",
+                    color: "#8affb3",
+                    url: "engineering.html"
+                },
+                {
+                    text: "Technology powers our digital age — from AI and robotics to apps and smart devices. It connects the world in amazing ways!",
+                    label: "Explore Tech",
+                    color: "#ffe680",
+                    url: "technology.html"
+                }
+            ];
+
+            let currentRotation = 0;
+
+            function rotateWheel(toRotation) {
+                const duration = 600;
+                const frameRate = 1000 / 60;
+                const totalFrames = Math.round(duration / frameRate);
+                const fromRotation = currentRotation;
+                const rotationDelta = toRotation - fromRotation;
+                let frame = 0;
+
+                const interval = setInterval(() => {
+                    frame++;
+                    const progress = frame / totalFrames;
+                    const easedProgress = 0.5 - 0.5 * Math.cos(Math.PI * progress);
+
+                    const currentAngle = fromRotation + rotationDelta * easedProgress;
+                    wheel.setAttribute("transform", `translate(200,200) rotate(${currentAngle})`);
+
+                    if (frame >= totalFrames) {
+                        clearInterval(interval);
+                        currentRotation = toRotation;
+                    }
+                }, frameRate);
+            }
+
+            segments.forEach(segment => {
+                segment.addEventListener('click', () => {
+                    const newIndex = +segment.dataset.index;
+                    const targetAngle = 270;
+                    const segmentStartAngle = newIndex * 90;
+                    const desiredRotation = targetAngle - segmentStartAngle;
+
+                    const normalizedCurrent = currentRotation % 360;
+                    let rotationDifference = desiredRotation - normalizedCurrent;
+
+                    if (rotationDifference > 180) rotationDifference -= 360;
+                    else if (rotationDifference < -180) rotationDifference += 360;
+
+                    const smoothRotation = currentRotation + rotationDifference;
+
+                    rotateWheel(smoothRotation);
+
+                    desc.textContent = data[newIndex].text;
+                    btn.textContent = data[newIndex].label;
+                    descBox.style.backgroundColor = data[newIndex].color;
+
+                    btn.dataset.link = data[newIndex].url;
+                });
+            });
+            btn.addEventListener('click', () => {
+                const link = btn.dataset.link;
+                if (link) {
+                    window.location.href = link;
+                }
+            });
+        });
+
+        // Continue Learning Section 
+        const carousel = document.querySelector('.continue-carousel');
+        document.querySelector('.prev').addEventListener('click', () => {
+            carousel.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        document.querySelector('.next').addEventListener('click', () => {
+            carousel.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
