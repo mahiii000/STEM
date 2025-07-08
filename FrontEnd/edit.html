@@ -30,42 +30,83 @@
             border-bottom-left-radius: 0;
             flex-grow: 1;
         }
+
+        /* --- STYLES FOR NEW SIDEBAR ELEMENTS --- */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Make sidebar take full viewport height */
+        }
+        .sidebar-footer {
+            margin-top: auto; /* Pushes this element to the bottom */
+            padding: 20px 0; /* Adds some spacing */
+        }
+        .sidebar-footer .delete-account-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 24px; /* Match padding of other links */
+            text-decoration: none;
+            color: #d9534f; /* Red color for destructive action */
+            font-weight: 500;
+        }
+        .sidebar-footer .delete-account-link svg {
+            margin-right: 16px; /* Space between icon and text */
+        }
+        /* --- END OF NEW STYLES --- */
     </style>
 </head>
 <body>
 
     <div class="app-content">
         <aside class="sidebar">
+<<<<<<< HEAD:FrontEnd/bader/edit.html
+            <div> <!-- This wrapper helps group the top part of the sidebar -->
+                <div class="sidebar-header">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </a>
+                    <h3>Seitting</h3>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.13,5.12L18.88,8.87M3,17.25V21H6.75L17.81,9.94L14.06,6.19L3,17.25Z"></path></svg>
+                                Edit Profile
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="help.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,19C11.45,19 11,18.55 11,18V17C11,16.45 11.45,16 12,16C12.55,16 13,16.45 13,17V18C13,18.55 12.55,19 12,19M13.07,10.25L12.5,12.88C12.44,13.19 12.19,13.44 11.88,13.5C11.5,13.56 11.16,13.37 11.05,13.04L10,10.25C9.84,9.75 10.03,9.2 10.5,8.95C10.79,8.79 11.12,8.75 11.43,8.84C12.2,9.04 12.8,9.63 13.07,10.25M12,7C11.45,7 11,6.55 11,6V5C11,4.45 11.45,4 12,4C12.55,4 13,4.45 13,5V6C13,6.55 12.55,7 12,7Z"></path></svg>
+                                Help
+                            </a>
+                        </li>
+                        <!-- === NEW SIGN OUT BUTTON === -->
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 17v-3H9v-4h7V7l5 5-5 5M14 2a2 2 0 012 2v2h-2V4H5v16h9v-2h2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V4a2 2 0 012-2h9z"></path></svg>
+                                Sign Out
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- === NEW DELETE ACCOUNT BUTTON WRAPPER === -->
+            <div class="sidebar-footer">
+                <a href="#" class="delete-account-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z"></path></svg>
+                    Delete Account
+                </a>
+=======
             <div class="sidebar-header">
                 <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                 </a>
                 <h3>Setting</h3>
+>>>>>>> f17763e8232566675f57ca236da4b5aa80dfcd25:FrontEnd/edit.html
             </div>
-            <nav class="sidebar-nav">
-                <ul>
-                    <li class="active">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.13,5.12L18.88,8.87M3,17.25V21H6.75L17.81,9.94L14.06,6.19L3,17.25Z"></path></svg>
-                            Edit Profile
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2C6.5,2 2,6.5 2,12Z"></path></svg>
-                            Appearance
-                        </a>
-                    </li>
-                    <li>
-                        <a href="help.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,19C11.45,19 11,18.55 11,18V17C11,16.45 11.45,16 12,16C12.55,16 13,16.45 13,17V18C13,18.55 12.55,19 12,19M13.07,10.25L12.5,12.88C12.44,13.19 12.19,13.44 11.88,13.5C11.5,13.56 11.16,13.37 11.05,13.04L10,10.25C9.84,9.75 10.03,9.2 10.5,8.95C10.79,8.79 11.12,8.75 11.43,8.84C12.2,9.04 12.8,9.63 13.07,10.25M12,7C11.45,7 11,6.55 11,6V5C11,4.45 11.45,4 12,4C12.55,4 13,4.45 13,5V6C13,6.55 12.55,7 12,7Z"></path></svg>
-                            Help
-                            
-
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </aside>
 
         <main class="main-content">
@@ -135,6 +176,7 @@
                             <option value="+253">🇩🇯 +253</option>
                             <option value="+269">🇰🇲 +269</option>
                             <option value="+222">🇲🇷 +222</option>
+                             <option value="+1">🇮🇳 +91</option>
                             <option value="+1">🇺🇸 +1</option>
                             <option value="+44">🇬🇧 +44</option>
                         </select>
