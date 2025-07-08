@@ -40,3 +40,8 @@ Route::get('/science', [App\Http\Controllers\ScienceController::class, 'index'])
 
 // TechnologyController route
 Route::get('/technology', [App\Http\Controllers\TechnologyController::class, 'show'])->name('technology.show');
+
+// Review page route (GET)
+Route::get('/review', function () {
+    return view('review'); // Make sure review.blade.php exists in resources/views
+})->name('review');
