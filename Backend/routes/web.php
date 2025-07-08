@@ -52,4 +52,5 @@ Route::get('/review', function () {
 
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home.index');
+

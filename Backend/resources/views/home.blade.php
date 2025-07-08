@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bright Minds</title>
-  <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
- 
 </head>
-<body>
 
+<body>
   <!-- Header -->
   <header>
     <div class="header-left">
-      <img src="images/bright-mind-logo.png" alt="Bright Mind Logo" class="logo-img">
+      <img src="{{ asset('images/bright-mind-logo.png') }}" alt="Bright Mind Logo" class="logo-img">
     </div>
 
     <nav class="navbar">
       <div class="nav-center">
         <ul class="nav-icons">
-          <li><div class="icon-box"><img src="images/home-icon.png" alt="Home"></div><p>Home</p></li>
-          <li><div class="icon-box"><img src="images/learning-icon.png" alt="Learning"></div><p>Learning</p></li>
-          <li><div class="icon-box"><img src="images/teaching-icon.png" alt="Teachers"></div><p>Teachers</p></li>
-          <li><div class="icon-box"><img src="images/blog-icon.png" alt="Blogs"></div><p>Blogs</p></li>
+          <li>
+            <img src="{{ asset('images/home-icon.png') }}" alt="Home">
+            <p>Home</p>
+          </li>
+          <li>
+            <img src="{{ asset('images/learning-icon.png') }}" alt="Learning">
+            <p>Learning</p>
+          </li>
+          <li>
+            <img src="{{ asset('images/teaching-icon.png') }}" alt="Teachers">
+            <p>Teachers</p>
+          </li>
+          <li>
+            <img src="{{ asset('images/blog-icon.png') }}" alt="Blogs">
+            <p>Blogs</p>
+          </li>
         </ul>
       </div>
 
@@ -36,94 +49,98 @@
           <button class="login">Log In</button>
         </div>
       </div>
-    </nav>      
+    </nav>
   </header>
 
   <!-- Hero Section -->
   <div class="slideshow-container">
     <div class="slide fade">
-      <img src="images/for-parents.jpg" alt="For Parents">
+      <img src="{{ asset('images/for-parents.jpg') }}" alt="For Parents">
       <div class="overlay dark">
         <h2>For Parents</h2>
         <button class="discover-btn">Discover</button>
       </div>
     </div>
     <div class="slide fade">
-      <img src="images/for-students.jpg" alt="For Students">
+      <img src="{{ asset('images/for-students.jpg') }}" alt="For Students">
       <div class="overlay dark">
         <h2>For Students</h2>
         <button class="discover-btn">Discover</button>
       </div>
     </div>
     <div class="slide fade">
-      <img src="images/for-educators.webp" alt="For Educators">
+      <img src="{{ asset('images/for-educators.webp') }}" alt="For Educators">
       <div class="overlay dark">
         <h2>For Educators</h2>
         <button class="discover-btn">Discover</button>
       </div>
     </div>
     <div class="slide fade">
-        <img src="images/for-schools.jpg" alt="For Schools">
-        <div class="overlay dark">
-          <h2>For Schools</h2>
-          <button class="discover-btn">Discover</button>
-        </div>
+      <img src="{{ asset('images/for-schools.jpg') }}" alt="For Schools">
+      <div class="overlay dark">
+        <h2>For Schools</h2>
+        <button class="discover-btn">Discover</button>
       </div>
+    </div>
   </div>
-  
-<!-- STEM Interactive SVG Wheel (merged content) -->
-<div class="container"> 
+
+  <!-- STEM Interactive SVG Wheel (merged content) -->
+  <div class="container">
     <div class="text-box">
       <p id="desc">
-        Math is more than just numbers. It helps us understand patterns, solve problems, and make sense of the world around us. From designing buildings to coding apps, math is at the core of every great idea.
+        Math is more than just numbers. It helps us understand patterns, solve problems, and make sense of the world
+        around us. From designing buildings to coding apps, math is at the core of every great idea.
       </p>
       <button class="explore-btn" id="explore">Explore Math</button>
     </div>
-  
-    <svg viewBox="0 0 400 400">
-      <g id="wheel" transform="rotate(0, 200, 200)">
-  
-        <!-- Math Segment -->
-        <path class="segment"
-              d="M200,100 A100,100 0 0,1 300,200 L260,200 A60,60 0 0,0 200,140 Z"
-              fill="#fd8d92"
-              data-index="0"
-              data-color="#fd8d92"
-              data-desc="Math is more than just numbers. It helps us understand patterns, solve problems, and make sense of the world around us. From designing buildings to coding apps, math is at the core of every great idea." />
-        <text x="245" y="135" font-size="14" text-anchor="middle" transform="rotate(-45,245,135)">Math</text>
-  
-        <!-- Science -->
-        <path class="segment"
-              d="M300,200 A100,100 0 0,1 200,300 L200,260 A60,60 0 0,0 260,200 Z"
-              fill="#80ccff"
-              data-index="1"
-              data-color="#80ccff"
-              data-desc="Science explains how things work — from atoms to galaxies. It helps us explore, experiment, and discover the universe around us." />
-        <text x="265" y="265" font-size="14" text-anchor="middle" transform="rotate(45,265,265)">Science</text>
-  
-        <!-- Engineering -->
-        <path class="segment"
-              d="M200,300 A100,100 0 0,1 100,200 L140,200 A60,60 0 0,0 200,260 Z"
-              fill="#8affb3"
-              data-index="2"
-              data-color="#8affb3"
-              data-desc="Engineering is about building, designing, and solving real-world problems. From bridges to software, it's where innovation comes to life!" />
-        <text x="135" y="265" font-size="14" text-anchor="middle" transform="rotate(135,135,265)">Engineering</text>
-  
-        <!-- Technology -->
-        <path class="segment"
-              d="M100,200 A100,100 0 0,1 200,100 L200,140 A60,60 0 0,0 140,200 Z"
-              fill="#ffe680"
-              data-index="3"
-              data-color="#ffe680"
-              data-desc="Technology powers our digital age — from AI and robotics to apps and smart devices. It connects the world in amazing ways!" />
-        <text x="135" y="135" font-size="14" text-anchor="middle" transform="rotate(-135,135,135)">Tech</text>
-  
-      </g>
-    </svg>
-  </div>  
-  
-  <!-- Testimonial Section-->
+
+    <div class="svg-container">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Curved paths for each label -->
+          <path id="path-math" d="M0,-70 A70,70 0 0,1 70,0" fill="none" />
+          <path id="path-science" d="M70,0 A70,70 0 0,1 0,70" fill="none" />
+          <path id="path-engineering" d="M0,70 A70,70 0 0,1 -70,0" fill="none" />
+          <path id="path-tech" d="M-70,0 A70,70 0 0,1 0,-70" fill="none" />
+        </defs>
+
+        <!-- Center wheel at (200,200) -->
+        <g id="wheel" transform="translate(200,200) rotate(0)">
+          <!-- Math Segment -->
+          <path class="segment" d="M0,-100 A100,100 0 0,1 100,0 L60,0 A60,60 0 0,0 0,-60 Z" fill="#fd8d92"
+            data-index="0" data-color="#fd8d92" />
+
+          <!-- Science Segment -->
+          <path class="segment" d="M100,0 A100,100 0 0,1 0,100 L0,60 A60,60 0 0,0 60,0 Z" fill="#80ccff" data-index="1"
+            data-color="#80ccff" />
+
+          <!-- Engineering Segment -->
+          <path class="segment" d="M0,100 A100,100 0 0,1 -100,0 L-60,0 A60,60 0 0,0 0,60 Z" fill="#8affb3"
+            data-index="2" data-color="#8affb3" />
+
+          <!-- Tech Segment -->
+          <path class="segment" d="M-100,0 A100,100 0 0,1 0,-100 L0,-60 A60,60 0 0,0 -60,0 Z" fill="#ffe680"
+            data-index="3" data-color="#ffe680" />
+
+          <!-- Curved labels -->
+          <text font-size="16" fill="#000">
+            <textPath href="#path-math" startOffset="50%" text-anchor="middle">Math</textPath>
+          </text>
+          <text font-size="16" fill="#000">
+            <textPath href="#path-science" startOffset="50%" text-anchor="middle">Science</textPath>
+          </text>
+          <text font-size="16" fill="#000">
+            <textPath href="#path-engineering" startOffset="50%" text-anchor="middle">Engineering</textPath>
+          </text>
+          <text font-size="16" fill="#000">
+            <textPath href="#path-tech" startOffset="50%" text-anchor="middle">Tech</textPath>
+          </text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Testimonial Section -->
   <section class="testimonial-section">
     <div class="testimonial-left">
       <h5>TESTIMONIAL</h5>
@@ -134,91 +151,86 @@
         <br><br>
         Are you too? Please give your assessment
       </p>
-      <button class="cta-button">Write your assessment →</button>
+      <a href="review.html" class="cta-button">Write your assessment</a>
     </div>
-  
-    <div class="testimonial-carousel">
-      <!-- Images -->
-      <div class="testimonial-wrapper">
+
+    <div class="testimonial-right">
+      <div class="testimonial-slideshow">
+
+        <!-- Slide 1 -->
         <div class="testimonial-slide active">
-          <img src="images/smiling-student.jpg" alt="User 1" />
+          <img src="{{ asset('images/smiling-student.jpg') }}" class="testimonial-image" alt="Student 1" />
+          <div class="testimonial-box">
+            <p>"Thank you so much for your help. It’s exactly what I’ve been looking for."</p>
+            <h4>Gloria Rose</h4>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <span class="review-source">12 reviews at Google</span>
+          </div>
         </div>
+
+        <!-- Slide 2 -->
         <div class="testimonial-slide">
-          <img src="images/smiling-student2.avif" alt="User 2" />
+          <img src="{{ asset('images/smiling-student2.jpg') }}" class="testimonial-image" alt="Student 2" />
+          <div class="testimonial-box">
+            <p>"Skilline helped me organize my learning path and stay consistent."</p>
+            <h4>Daniel Kim</h4>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <span class="review-source">8 reviews at Trustpilot</span>
+          </div>
         </div>
+
+        <!-- Slide 3 -->
         <div class="testimonial-slide">
-            <img src="images/smiling-student3.jpg" alt="User 3" />
+          <img src="{{ asset('images/smiling-student3.jpg') }}" class="testimonial-image" alt="Student 3" />
+          <div class="testimonial-box">
+            <p>"The support and content are amazing. I recommend it to all learners!"</p>
+            <h4>Sophia Martinez</h4>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <span class="review-source">15 reviews at Capterra</span>
+          </div>
         </div>
-        <div class="testimonial-slide">
-            <img src="images/smiling-student4.avif" alt="User 4" />
-        </div>
+
       </div>
-  
-      <!-- Text content -->
-      <div class="testimonial-wrapper">
-        <div class="testimonial-slide active">
-          <p>"Thank you so much for your help. It's exactly what I've been looking for..."</p>
-          <h4>Gloria Rose</h4>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <span class="review-source">12 reviews at Google</span>
-        </div>
-        <div class="testimonial-slide">
-          <p>"Skilline really changed how I study. Highly recommended!"</p>
-          <h4>Mark Johnson</h4>
-          <div class="stars">⭐⭐⭐⭐</div>
-          <span class="review-source">8 reviews at Google</span>
-        </div>
-        <div class="testimonial-slide">
-            <p>"Skilline really changed how I study. Highly recommended!"</p>
-            <h4>Mark Johnson</h4>
-            <div class="stars">⭐⭐⭐⭐</div>
-            <span class="review-source">3 reviews at Google</span>
-        </div>
-        <div class="testimonial-slide">
-            <p>"Skilline really changed how I study. Highly recommended!"</p>
-            <h4>Mark Johnson</h4>
-            <div class="stars">⭐⭐⭐⭐</div>
-            <span class="review-source">6 reviews at Google</span>
-        </div>
-      </div>
-  
-      <!-- Arrows -->
-      <button class="prev-btn" onclick="changeSlide(-1)">←</button>
-      <button class="next-btn" onclick="changeSlide(1)">→</button>
     </div>
   </section>
-  
-   
-<!--About Us Section -->
+
+  <!--About Us Section -->
   <section class="about-section">
     <div class="text">
       <h2>About Us</h2>
       <p>
-        We are a team of passionate students committed to making education more accessible and engaging through innovative platforms and community initiatives.
+        Bright Minds is where curiosity meets creativity. We're a student-led initiative focused on reimagining how
+        education works — making it more inclusive, interactive, and inspiring. Our goal? To help every learner unlock
+        their full potential.
       </p>
     </div>
-  
-    <div class="about-slideshow">
-      <div class="about-slide fade"><img src="images/aboutus1.webp" alt="Slide 1"></div>
-      <div class="about-slide fade"><img src="images/aboutus2.jpg" alt="Slide 2"></div>
-      <div class="about-slide fade"><img src="images/aboutus3.avif" alt="Slide 3"></div>
-      <div class="about-slide fade"><img src="images/aboutus4.jpg" alt="Slide 3"></div>
+
+    <div class="about-carousel-wrapper">
+      <div class="about-carousel">
+        <img src="{{ asset('images/aboutus1.webp') }}" alt="Slide 1" />
+        <img src="{{ asset('images/aboutus2.jpg') }}" alt="Slide 2" />
+        <img src="{{ asset('images/aboutus3.avif') }}" alt="Slide 3" />
+        <img src="{{ asset('images/aboutus4.jpg') }}" alt="Slide 4" />
+        <img src="{{ asset('images/aboutus5.jpg') }}" alt="Slide 5" />
+        <img src="{{ asset('images/aboutus6.webp') }}" alt="Slide 6" />
+
+
+      </div>
     </div>
   </section>
-  
-  
+
   <!-- Footer Section -->
   <footer class="custom-footer">
     <div class="footer-left">
       <p>Follow Us</p>
       <div class="social-icons">
-        <img src="images/x-logo.png" alt="X">
-        <img src="images/ig-logo.png" alt="Instagram">
-        <img src="images/yt-logo.png" alt="YouTube">
-        <img src="images/linkedin-logo.png" alt="LinkedIn">
+        <img src="{{ asset('images/x-logo.png') }}" alt="X">
+        <img src="{{ asset('images/ig-logo.png') }}" alt="Instagram">
+        <img src="{{ asset('images/yt-logo.png') }}" alt="YouTube">
+        <img src="{{ asset('images/linkedin-logo.png') }}" alt="LinkedIn">
       </div>
     </div>
-  
+
     <div class="footer-right">
       <h3>Subscribe to get our Newsletter</h3>
       <div class="newsletter">
@@ -233,121 +245,153 @@
       <p class="copyright">© 2025 AURAK & RIT STUDENTS</p>
     </div>
   </footer>
-  
-  
+
   <script>
-    // HERO SECTION SLIDESHOW
-    let slideIndex = 0;
-    showSlides();
-  
-    function showSlides() {
-      const slides = document.getElementsByClassName("slide");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    document.addEventListener('DOMContentLoaded', () => {
+      // HERO SECTION SLIDESHOW
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        const slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000);
       }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
+
+      // ABOUT US SLIDESHOW
+      let aboutSlideIndex = 0;
+      showAboutSlides();
+
+      function showAboutSlides() {
+        const aboutSlides = document.getElementsByClassName("about-slide");
+        for (let i = 0; i < aboutSlides.length; i++) {
+          aboutSlides[i].style.display = "none";
+        }
+        aboutSlideIndex++;
+        if (aboutSlideIndex > aboutSlides.length) {
+          aboutSlideIndex = 1;
+        }
+        aboutSlides[aboutSlideIndex - 1].style.display = "block";
+        setTimeout(showAboutSlides, 3000);
       }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Change image every 3 seconds
-    }
-  
-    // ABOUT US SLIDESHOW
-    let aboutSlideIndex = 0;
-    showAboutSlides();
-  
-    function showAboutSlides() {
-      const aboutSlides = document.getElementsByClassName("about-slide");
-      for (let i = 0; i < aboutSlides.length; i++) {
-        aboutSlides[i].style.display = "none";
+
+      // === TESTIMONIALS SLIDESHOW ===
+      const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+      let testimonialIndex = 0;
+
+      function showTestimonialSlide(index) {
+        testimonialSlides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
       }
-      aboutSlideIndex++;
-      if (aboutSlideIndex > aboutSlides.length) {
-        aboutSlideIndex = 1;
+
+      function nextTestimonialSlide() {
+        testimonialIndex = (testimonialIndex + 1) % testimonialSlides.length;
+        showTestimonialSlide(testimonialIndex);
       }
-      aboutSlides[aboutSlideIndex - 1].style.display = "block";
-      setTimeout(showAboutSlides, 3000); // Change image every 3 seconds
-    }
 
-    // TESTIMONIALS SLIDESHOW 
-    let currentIndex = 0;
+      showTestimonialSlide(testimonialIndex);
+      setInterval(nextTestimonialSlide, 3000);
 
-  function changeSlide(direction) {
-    const imageSlides = document.querySelectorAll(".testimonial-wrapper:nth-of-type(1) .testimonial-slide");
-    const textSlides = document.querySelectorAll(".testimonial-wrapper:nth-of-type(2) .testimonial-slide");
+      // STEM INTERACTIVE WHEEL
+      const segments = document.querySelectorAll('.segment');
+      const desc = document.getElementById('desc');
+      const btn = document.getElementById('explore');
+      const wheel = document.querySelector('svg #wheel');
+      const descBox = document.querySelector('.text-box');
 
-    imageSlides[currentIndex].classList.remove("active");
-    textSlides[currentIndex].classList.remove("active");
+      const data = [
+        {
+          text: "Math is more than just numbers. It helps us understand patterns, solve problems, and make sense of the world around us. From designing buildings to coding apps, math is at the core of every great idea.",
+          label: "Explore Math",
+          color: "#fd8d92",
+          url: "math.html"
+        },
+        {
+          text: "Science helps us ask big questions and find meaningful answers. It explains how things work, from the tiniest atoms to the largest galaxies. Through hands-on discovery, science fuels innovation and progress.",
+          label: "Dive into Science",
+          color: "#80ccff",
+          url: "science.html"
+        },
+        {
+          text: "Engineering is about building, designing, and solving real-world problems. From bridges to software, it's where innovation comes to life!",
+          label: "Explore Engineering",
+          color: "#8affb3",
+          url: "engineering.html"
+        },
+        {
+          text: "Technology powers our digital age — from AI and robotics to apps and smart devices. It connects the world in amazing ways!",
+          label: "Explore Tech",
+          color: "#ffe680",
+          url: "technology.html"
+        }
+      ];
 
-    currentIndex += direction;
+      let currentRotation = 0;
 
-    if (currentIndex < 0) {
-      currentIndex = imageSlides.length - 1;
-    } else if (currentIndex >= imageSlides.length) {
-      currentIndex = 0;
-    }
+      function rotateWheel(toRotation) {
+        const duration = 600;
+        const frameRate = 1000 / 60;
+        const totalFrames = Math.round(duration / frameRate);
+        const fromRotation = currentRotation;
+        const rotationDelta = toRotation - fromRotation;
+        let frame = 0;
 
-    imageSlides[currentIndex].classList.add("active");
-    textSlides[currentIndex].classList.add("active");
-  }
-  
-  //STEM Section
-  const segment = document.querySelectorAll('.segment');
-  const desc = document.getElementById('desc');
-  const btn = document.getElementById('explore');
-  const wheel = document.getElementById('wheel');
+        const interval = setInterval(() => {
+          frame++;
+          const progress = frame / totalFrames;
+          const easedProgress = 0.5 - 0.5 * Math.cos(Math.PI * progress);
 
-  const data = [
-    {
-      text: "Math is more than just numbers. It helps us understand patterns, solve problems, and make sense of the world around us. From designing buildings to coding apps, math is at the core of every great idea.",
-      label: "Explore Math"
-    },
-    {
-      text: "Science helps us explore nature, conduct experiments, and discover how the world works.",
-      label: "Explore Science"
-    },
-    {
-      text: "Engineering is about designing and building solutions to real-world problems.",
-      label: "Explore Engineering"
-    },
-    {
-      text: "Technology powers our tools, apps, and inventions that shape the future.",
-      label: "Explore Tech"
-    }
-  ];
+          const currentAngle = fromRotation + rotationDelta * easedProgress;
+          wheel.setAttribute("transform", `translate(200,200) rotate(${currentAngle})`);
 
-  let index = 0;
-  let angle = 0;
+          if (frame >= totalFrames) {
+            clearInterval(interval);
+            currentRotation = toRotation;
+          }
+        }, frameRate);
+      }
 
-  wheel.style.transition = "transform 0.6s ease-in-out";
+      segments.forEach(segment => {
+        segment.addEventListener('click', () => {
+          const newIndex = +segment.dataset.index;
+          const targetAngle = 270;
+          const segmentStartAngle = newIndex * 90;
+          const desiredRotation = targetAngle - segmentStartAngle;
 
-  part.forEach(seg => {
-    seg.addEventListener('click', () => {
-      const newIndex = +seg.dataset.index;
-      const diff = newIndex - index;
-      angle -= diff * 90;
-      wheel.setAttribute("transform", `rotate(${angle}, 200, 200)`);
+          const normalizedCurrent = currentRotation % 360;
+          let rotationDifference = desiredRotation - normalizedCurrent;
 
-      desc.textContent = data[newIndex].text;
-      btn.textContent = data[newIndex].label;
-      index = newIndex;
+          if (rotationDifference > 180) rotationDifference -= 360;
+          else if (rotationDifference < -180) rotationDifference += 360;
+
+          const smoothRotation = currentRotation + rotationDifference;
+
+          rotateWheel(smoothRotation);
+
+          desc.textContent = data[newIndex].text;
+          btn.textContent = data[newIndex].label;
+          descBox.style.backgroundColor = data[newIndex].color;
+
+          btn.dataset.link = data[newIndex].url;
+        });
+      });
+      btn.addEventListener('click', () => {
+        const link = btn.dataset.link;
+        if (link) {
+          window.location.href = link;
+        }
+      });
     });
-  });
+  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
 
-
-  const part = document.querySelectorAll('.segment');
-  const descBox = document.querySelector('.text-box');
-  const descText = document.getElementById('desc');
-
-  part.forEach(segment => {
-    part.addEventListener('click', () => {
-      const newColor = segment.getAttribute('data-color');
-      const newDesc = segment.getAttribute('data-desc');
-
-      descBox.style.backgroundColor = newColor;
-      descText.textContent = newDesc;
-    });
-  });
-
-  </script>  
+</html>
