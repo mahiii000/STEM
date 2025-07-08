@@ -51,5 +51,5 @@ Route::get('/review', function () {
 })->name('review');
 
 
-Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
