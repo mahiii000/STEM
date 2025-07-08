@@ -27,7 +27,6 @@ body {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD:FrontEnd/bader/stem.css
 /* HEADER */
 .main-header {
   background-color: var(--primary-purple);
@@ -42,109 +41,6 @@ body {
   border-top-right-radius: 16px;
   position: relative;
   z-index: 1;
-=======
-/* -------------------------------------------------------- */
-
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;      /* ↓ reduced top/bottom padding */
-  height: auto;              /* No fixed height */
-  background: linear-gradient(-45deg, #c78ff1, #74cde2, #fbc2eb, #d4a1f9);
-  background-size: 600% 600%;
-  animation: gradientFlow 12s ease infinite;
-  color: white;
-  padding: 30px 50px;
-  padding-bottom: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top-left-radius: 12px; /* Rounds the corners to match the card */
-  border-top-right-radius: 12px;
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* === Logo Left === */
-.logo-area .logo {
-  height: 70px;
-}
-
-/* === Nav Icons Centered === */
-.nav-icons {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-/* === Icon Container === */
-.icon-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-}
-
-/* Icon Rounded Square */
-.icon-box {
-  width: 60px;
-  height: 60px;
-  background-color: rgba(255,255,255,0.9);
-  border-radius: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.icon-box img {
-  height: 30px;
-  width: 30px;
-}
-
-/* Label (Hidden by default) */
-.label {
-  font-size: 13px;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 8px;
-  color: #222;
-  opacity: 0;
-  transform: translateY(5px);
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-/* === Hover Behavior === */
-.icon-item:hover .label {
-  opacity: 1;
-  transform: translateY(0);
-}
-.icon-item:hover .icon-box {
-  transform: scale(1.05);
-}
-
-/* === Active State === */
-.icon-item.active .icon-box {
-  background-color: #6c63ff;
-}
-.icon-item.active .label {
-  opacity: 1;
-  font-weight: bold;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-}
-/* --- HEADER SECTION (No changes here) --- */
-.main-header {
-
->>>>>>> f17763e8232566675f57ca236da4b5aa80dfcd25:FrontEnd/stem.css
 }
 
 .logo {
@@ -157,7 +53,7 @@ body {
 }
 
 .logo img {
-  height: 120px;
+  height: 100px;
   width: auto;
 }
 
